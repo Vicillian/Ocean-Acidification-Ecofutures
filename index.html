@@ -10,9 +10,25 @@
 
     <body class="">
 
+<!-- dis is de black overlay so page can fade out wagwan man -->
+<div id="fadeOverlay" style="
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  background: black; 
+  opacity: 0; 
+  pointer-events: none; 
+  transition: opacity 1.5s; 
+  z-index: 9999;">
+</div>
+
+
+
 <div class="firstMenu">
     
-        <button style="display: flex; position: relative; left: 698px; top: 290px;" type="button" onclick="activateSecondMenu()">Go to Start Menu</button>
+        <button style="display: flex; position: relative; left: 45%; top: 290px;" type="button" onclick="activateSecondMenu()">Start Game Test</button>
     
 
         <p id="position-log">Mouse Position: (X: 0, Y: 0)</p>
@@ -23,9 +39,15 @@
 
 <div class="secondMenu" hidden>
 asdasdasdasd
+
+    <button onclick="startClicked()" style="background: none; border: none; cursor: pointer;">
+        <img src="playButton.png" alt="Start Game" height="100px" style="display: flex; position: relative; left: 500px; top: 350px;" onclick="playButtonClicked()">
+    </button>
+
 </div>
 
     <audio id="sadViolin" src="sadViolin.mp3"></audio>
+    <audio id="buttonClick" src="buttonClick.mp3"></audio>
     <!------------------------------------------------------------------------------------------------------------------------------------>
     </body>
 
@@ -33,6 +55,27 @@ asdasdasdasd
 
 
 <script>
+
+function startStory() {
+  const overlay = document.getElementById('fadeOverlay');
+  
+  // 1. Make the black overlay visible (this triggers the CSS transition)
+  overlay.style.opacity = '1';
+  overlay.style.pointerEvents = 'all'; // Prevents clicking other things while fading
+
+  // 2. Wait for the fade (1500ms = 1.5 seconds) then change page
+  setTimeout(function() {
+    window.location.href = "startStory.html";
+  }, 1500); 
+}
+
+function playButtonClicked() {
+
+    buttonclickSound();
+    startStory();
+
+}
+
 
 function activateSecondMenu() {
     // This removes the 'hidden' attribute we added in HTML
@@ -46,6 +89,17 @@ function activateSecondMenu() {
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundRepeat = "no-repeat";
+
+    console.log("dis do anytin?")
+  const elem = document.documentElement; // Targets the entire page
+
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
 }
     
 const positionElement = document.getElementById('position-log');
@@ -75,8 +129,17 @@ function moveMoused(){
     
 const sadViolin = document.getElementById("sadViolin");
 console.log("Audio element:", sadViolin);
+const buttonClicksound = document.getElementById("buttonClick");
+console.log("Audio elem:", buttonClicksound);
+
+function buttonclickSound() {
+    buttonClicksound.play();
+    buttonClicksound.volume = 1;
+    console.log("play button was clickedy clacked");
+}
 
 function playAudio() {
+    sadViolin.loop = true;
   sadViolin.play();
   sadViolin.volume = 0.2;
   console.log("sad violin is playing");
@@ -103,6 +166,7 @@ function dissolveElement(elementId) {
 }
 
 
+
     
 </script>
 
@@ -117,6 +181,12 @@ function dissolveElement(elementId) {
 .hidden {
   display: none;
 }
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
 
 </style>
 
