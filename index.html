@@ -12,18 +12,17 @@
 
 <div class="firstMenu">
     
-        <button type="button" onclick="activateSecondMenu()">Go to Start Menu</button>
+        <button style="display: flex; position: relative; left: 698px; top: 290px;" type="button" onclick="activateSecondMenu()">Go to Start Menu</button>
     
 
         <p id="position-log">Mouse Position: (X: 0, Y: 0)</p>
         
 </div>
 
-        <p id="position-log">Mouse Position: (X: 0, Y: 0)</p>
 
 
 <div class="secondMenu" hidden>
-
+asdasdasdasd
 </div>
 
     <audio id="sadViolin" src="sadViolin.mp3"></audio>
@@ -36,11 +35,17 @@
 <script>
 
 function activateSecondMenu() {
-  // This removes the 'hidden' attribute we added in HTML
-  document.querySelector('.secondMenu').removeAttribute('hidden');
+    // This removes the 'hidden' attribute we added in HTML
+    document.querySelector('.secondMenu').removeAttribute('hidden');
   
-  // And hides the intro
-  document.querySelector('.firstMenu').setAttribute('hidden', true);
+    // And hides the intro
+    document.querySelector('.firstMenu').setAttribute('hidden', true);
+    playAudio();
+    console.log("Audio's running now :o");
+    document.body.style.backgroundImage = "url('animalBand.png')";
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundRepeat = "no-repeat";
 }
     
 const positionElement = document.getElementById('position-log');
@@ -86,9 +91,33 @@ function bingBong(){
 }
 
 
+function dissolveElement(elementId) {
+  const thText = document.getElementById(elementId);
+  // 1. Start fading
+  thText.classList.add('fade-out');
+  
+  // 2. Wait for animation to finish, then set display:none
+  thText.addEventListener('transitionend', function() {
+    thText.classList.add('hidden');
+  }, { once: true });
+}
+
 
     
 </script>
 
+<style>
+
+.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-out, visibility 1s;
+}
+
+.hidden {
+  display: none;
+}
+
+</style>
 
 </html>
