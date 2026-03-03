@@ -29,16 +29,17 @@ const positionElement = document.getElementById('position-log');
             // Get the X and Y coordinates from the event object
             const x = event.clientX; // X coordinate relative to the viewport
             const y = event.clientY; // Y coordinate relative to the viewport
+            const meow = x + 2;
 
             // Update the text content to display the current position
             positionElement.textContent = `Mouse Position: (X: ${x}, Y: ${y})`;
         });
 
-const ugh = x;
+const ugh = 1;
     
 function moveMoused(){
 
-    if (ugh != x) {
+    if (ugh != meow) {
         playAudio();
     }
 
