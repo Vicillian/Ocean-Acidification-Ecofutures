@@ -10,12 +10,21 @@
 
     <body class="">
 
+<div class="firstMenu">
     <a href="startMenu.html">
-        <button type="button">Go to Start Menu</button>
+        <button type="button" onclick="activateSecondMenu()">Go to Start Menu</button>
     </a>
 
         <p id="position-log">Mouse Position: (X: 0, Y: 0)</p>
         
+</div>
+
+        <p id="position-log">Mouse Position: (X: 0, Y: 0)</p>
+
+
+<div class="secondMenu" hidden>
+
+</div>
 
     <audio id="sadViolin" src="sadViolin.mp3"></audio>
     <!------------------------------------------------------------------------------------------------------------------------------------>
@@ -26,6 +35,14 @@
 
 <script>
 
+function activateSecondMenu() {
+  // This removes the 'hidden' attribute we added in HTML
+  document.querySelector('.secondMenu').removeAttribute('hidden');
+  
+  // And hides the intro
+  document.querySelector('.firstMenu').setAttribute('hidden', true);
+}
+    
 const positionElement = document.getElementById('position-log');
         // Add a mousemove event listener to the entire document
         document.addEventListener('mousemove', (event) => {
