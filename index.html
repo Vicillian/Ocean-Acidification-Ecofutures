@@ -34,6 +34,17 @@ const positionElement = document.getElementById('position-log');
             positionElement.textContent = `Mouse Position: (X: ${x}, Y: ${y})`;
         });
 
+const ugh = positionElement;
+    
+function moveMoused(){
+
+    if (ugh != lastPosition) {
+        playAudio();
+    }
+
+}
+moveMoused();
+
 
     
 const sadViolin = document.getElementById("sadViolin");
@@ -55,16 +66,17 @@ function bingBong(){
 
 let meow = 10;
 var bark = 7
-    
+   
 function wowMousemoved(){
     if (meow !== bark) {
-    playAudio();
-    console.log("audio is playing :)");
+    console.log("audio is not playing yet :/");
     }
 }
+    
 
 wowMousemoved();
 
+    
 </script>
 
 
