@@ -33,6 +33,8 @@ const positionElement = document.getElementById('position-log');
             // Update the text content to display the current position
             positionElement.textContent = `Mouse Position: (X: ${x}, Y: ${y})`;
         });
+
+
     
 const sadViolin = document.getElementById("sadViolin");
 console.log("Audio element:", sadViolin);
@@ -51,6 +53,13 @@ function bingBong(){
     playAudio();
 }
 
+function wowMousemoved(){
+    if (event.clientX !== lastX) {
+    playAudio();
+}
+
+wowMousemoved();
+    
 bingBong();
 </script>
 
