@@ -53,14 +53,18 @@ function bingBong(){
     playAudio();
 }
 
+let meow = 10;
+var bark = 7
+    
 function wowMousemoved(){
-    if (event.clientX !== lastX) {
+    if (meow !== bark) {
     playAudio();
+    console.log("audio is playing :)");
+    }
 }
 
 wowMousemoved();
-    
-bingBong();
+
 </script>
 
 
