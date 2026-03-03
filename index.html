@@ -11,7 +11,7 @@
 
     <body class="">
 
-
+    <audio id="flareSound" src="flareSound.m4a"></audio>
     <!------------------------------------------------------------------------------------------------------------------------------------>
     </body>
 
@@ -20,9 +20,24 @@
 
 <script>
 
+const sadViolin = document.getElementById("sadViolin");
+console.log("Audio element:", sadViolin);
 
+function playAudio() {
+  sadViolin.play();
+  sadViolin.volume = 0.2;
+  console.log("sad violin is playing");
+}
 
+function pauseAudio() {
+  sadViolin.pause();
+}
 
+function bingBong(){
+    playAudio();
+}
+
+bingBong();
 </script>
 
 
