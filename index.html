@@ -29,7 +29,6 @@ const positionElement = document.getElementById('position-log');
             // Get the X and Y coordinates from the event object
             const x = event.clientX; // X coordinate relative to the viewport
             const y = event.clientY; // Y coordinate relative to the viewport
-            const meow = x + 2;
             if (teeth == 1){
                 moveMoused();
             }
@@ -43,11 +42,8 @@ const ugh = 1;
 let teeth = 1;
     
 function moveMoused(){
-    if (ugh != meow) {
         playAudio();
         teeth = 2;
-    }
-
 }    
 
 
@@ -69,14 +65,6 @@ function bingBong(){
     playAudio();
 }
 
-let meow = 10;
-var bark = 7
-   
-function wowMousemoved(){
-    if (meow !== bark) {
-    console.log("audio is not playing yet :/");
-    }
-}
     
 
 wowMousemoved();
