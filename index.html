@@ -29,10 +29,26 @@ const positionElement = document.getElementById('position-log');
             // Get the X and Y coordinates from the event object
             const x = event.clientX; // X coordinate relative to the viewport
             const y = event.clientY; // Y coordinate relative to the viewport
+            const meow = x + 2;
+            if (teeth == 1){
+                moveMoused();
+            }
 
             // Update the text content to display the current position
             positionElement.textContent = `Mouse Position: (X: ${x}, Y: ${y})`;
         });
+
+const ugh = 1;
+
+let teeth = 1;
+    
+function moveMoused(){
+    if (ugh != meow) {
+        playAudio();
+        teeth = 2;
+    }
+
+}    
 
 
     
@@ -55,16 +71,17 @@ function bingBong(){
 
 let meow = 10;
 var bark = 7
-    
+   
 function wowMousemoved(){
     if (meow !== bark) {
-    playAudio();
-    console.log("audio is playing :)");
+    console.log("audio is not playing yet :/");
     }
 }
+    
 
 wowMousemoved();
 
+    
 </script>
 
 
