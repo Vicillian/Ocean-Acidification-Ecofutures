@@ -11,6 +11,9 @@
 
     <body class="">
 
+        <p id="position-log">Mouse Position: (X: 0, Y: 0)</p>
+        
+
     <audio id="sadViolin" src="sadViolin.mp3"></audio>
     <!------------------------------------------------------------------------------------------------------------------------------------>
     </body>
@@ -20,6 +23,17 @@
 
 <script>
 
+const positionElement = document.getElementById('position-log');
+        // Add a mousemove event listener to the entire document
+        document.addEventListener('mousemove', (event) => {
+            // Get the X and Y coordinates from the event object
+            const x = event.clientX; // X coordinate relative to the viewport
+            const y = event.clientY; // Y coordinate relative to the viewport
+
+            // Update the text content to display the current position
+            positionElement.textContent = `Mouse Position: (X: ${x}, Y: ${y})`;
+        });
+    
 const sadViolin = document.getElementById("sadViolin");
 console.log("Audio element:", sadViolin);
 
