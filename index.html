@@ -30,21 +30,25 @@ const positionElement = document.getElementById('position-log');
             const x = event.clientX; // X coordinate relative to the viewport
             const y = event.clientY; // Y coordinate relative to the viewport
             const meow = x + 2;
+            if (teeth == 1){
+                moveMoused();
+            }
 
             // Update the text content to display the current position
             positionElement.textContent = `Mouse Position: (X: ${x}, Y: ${y})`;
         });
 
 const ugh = 1;
+
+let teeth = 1;
     
 function moveMoused(){
-
     if (ugh != meow) {
         playAudio();
+        teeth = 2;
     }
 
-}
-moveMoused();
+}    
 
 
     
