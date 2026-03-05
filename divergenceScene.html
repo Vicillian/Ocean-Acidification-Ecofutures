@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
     </head>
 
-    <body class=""style="overflow: hidden;">
+    <body class="" style="overflow: hidden;">
 
 <!-- dis is de black overlay so page can fade out wagwan man -->
 <div id="fadeOverlay" style="
@@ -28,15 +28,9 @@
 
 <div class="firstMenu">
     
-        <button style="display: flex; position: relative; left: 45%; top: 290px;" type="button" onclick="activateSecondMenu()">Start Game Test</button>
+        <button style="display: flex; position: relative; left: 45%; top: 290px;" type="button" onclick="activateSecondMenu()">Continue</button>
     
 
-        <p id="position-log">Mouse Position: (X: 0, Y: 0)</p><br>
-        <p onclick="gotoFish()">
-        Note: The game has audio so please play this game in silence. <br>
-        Please set your volume to 50% or whatever is comfortable.
-        We hope you enjoy our game! :]
-</p>
         
 </div>
 
@@ -44,54 +38,37 @@
 
 <div class="secondMenu" hidden>
 
-    <button style="background: none; border: none; cursor: pointer;">
-        <img src="startButton.png" alt="Start Game"  style="display: flex; position: relative; left: 500px; top: 640px;" onmouseover="this.src='startClicked.png'" onmouseout="this.src='startButton.png'" onclick="playButtonClicked()">
-    </button>
-
-</div>
-
-
-<div class="startGame" hidden>
-
     <button style="background: none; border: none; cursor: pointer;display: flex; position: relative; left: 350px; top: 550px;">
         <img src="textBox.png" alt="Start Game" height="300px" width="820px"  style="display: flex; " onclick="buttonTester()">
     </button>
 
-    <p></p>
 
   <div class="text-container" style="position: relative; cursor: pointer;">
-    <p class="text1" onclick="swapText()" style="transition: opacity 1s; opacity: 1; pointer-events: none;display: flex; position: relative; left: 440px; top: 310px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">It's a sunny day at Capitola Beach, a person is walking down the street with <br>a slice of pizza and fries. The day has had a different feel to it. Gloom <br>lingers in the air as the birds squawk at tourists nearby. <br>You try to enjoy your warm food.</p>
-
+    <p class="text1" onclick="swapText()" style="transition: opacity 1s; opacity: 1; pointer-events: none;display: flex; position: relative; left: 430px; top: 310px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">
+    After a long time of searching for food. The Seagull has resulted to steal food <br>from humans. As fish in the sea seem to be disappearing, The seagull <br>is having difficulty finding fish to eat, making him sad as days go by.
     <p class="text2" onclick="swapText2()" style="transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: 430px; top: 150px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">
-      Nothing better than a Maui Wowie pizza from Pizza My Heart & French fries.
+      <br>As he is flying away with the food he took. <br>He noticed that there is something off about the environment that day.
     </p>
-    <p class="text3" onclick="swapFries()" style="transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: 430px; top: 50px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">
-      You choose to: <br> <br>
-      1. Take bite of pizza
+    <p class="text3" style="transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: 430px; top: 50px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">
+      The ocean is darker, and the sand is dirtier. Details like this gets the Seagulls <br>attention. The Seagull decides to pay a visit to another animals, to find out <br>what exactly is going on in the environment. The Seagull goes around <br>meeting up with various animals in the Santa Cruz and Monterey bay. 
     </p>
-    <p class="text4" onclick="swapPizza()" style="transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: 430px; top: 50px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">
-      2. Take bite of Fries
-    </p>
-    <p class="textFries" onclick="friesNext()" style="transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: 430px; top: -100px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">
-      A Seagull snatches up your Fries. Darn Seagulls.. <br>Back in your day Seagulls never snatched food. They politely <br>asked for the food. And helped grandmas cross the street. <br>Now that you think about it.. Seagulls..
-    </p>
-  </div>
-    <p class="text7" onclick="nextPage()" style="transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: 430px; top: -200px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">
-      <a href="divergenceScene.html">KAW KA KAW KA KAWWWW KAWWW SEAGULL KAWWWW </a></p>
+    <p class="text4" style="transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: 430px; top: -100px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">
+        Seagull is aware that there is something odd going on with the ocean, <br>as many animals are acting weird and different from their usual self. <br>Seagull learns by each visit that something is happening with <br>the ocean and climate change.
     </p>
 
-    <button class="clickBox" style="background: none; border: none; cursor: pointer;display: flex; position: relative; left: 350px; top: -380px;">
+  </div>
+
+
+    <button class="clickBox" style="background: none; border: none; cursor: pointer;display: flex; position: relative; left: 350px; top:-350px;">
         <img src="clickBox.png" alt="Start Game" height="300px" width="820px"  style="display: flex; " onclick="buttonTester()">
     </button>
     <!--<p style="display: flex; position: relative; left: 440px; top: 310px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">It's a sunny day at Capitola Beach, a person is walking down the street with <br>a slice of pizza and fries. The day has had a different feel to it. Gloom <br>lingers in the air as the birds squawk at tourists nearby. <br>You try to enjoy your warm food. </p>
 -->
 
-    <p class="eatPizza" onclick="eatPizza()" style="cursor: pointer; transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: 430px; top: -600px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">
-      You take a bite of your Pizza<br>
-      on nom nom
-    </p>
-
 </div>
+
+
+
 
 
     <audio id="sadViolin" src="sadViolin.mp3"></audio>
@@ -125,53 +102,51 @@ if (textNum === 0) {
 }else if(textNum === 1) {
   const t1 = document.querySelector('.text2');
   const t2 = document.querySelector('.text3');
-  const t3 = document.querySelector('.text4');
-  const clickBox = document.querySelector('.clickBox');
 
   // 1. Fade out the first text
   t1.style.opacity = '0';
   t1.style.pointerEvents = 'none'; // Make it unclickable once it's fading
-    clickBox.style.opacity = '0';
-  clickBox.style.pointerEvents = 'none'; // Make it unclickable once it's fading
 
   // 2. Wait a moment (optional) and fade in the second text
   setTimeout(() => {
-    document.querySelector(".clickBox").setAttribute('hidden', true);
     t2.style.opacity = '1';
     t2.style.pointerEvents = 'all'; // Make the new text clickable if needed
-    t3.style.opacity = '1';
-    t3.style.pointerEvents = 'all'; // Make the new text clickable if needed
-
   }, 500); // 500ms makes them overlap slightly for a smoother look
   textNum = textNum + 1;
   console.log("textNum is " + textNum)
-  document.querySelector(".clickBox").setAttribute('hidden', true);
-}else if(textNum === 2) {
-  const t1 = document.querySelector('.textFries');
-  const t2 = document.querySelector('.text3');
-  const t3 = document.querySelector('.text4');
-  const clickBox = document.querySelector('.clickBox');
+}else if (textNum === 2) {
+      const t1 = document.querySelector('.text3');
+  const t2 = document.querySelector('.text4');
 
   // 1. Fade out the first text
   t1.style.opacity = '0';
   t1.style.pointerEvents = 'none'; // Make it unclickable once it's fading
-    clickBox.style.opacity = '0';
-  clickBox.style.pointerEvents = 'none'; // Make it unclickable once it's fading
-  console.log("clickbox should be hidden now cuz of clickbox textnum === 2");
 
   // 2. Wait a moment (optional) and fade in the second text
   setTimeout(() => {
-    document.querySelector(".clickBox").setAttribute('hidden', true);
-    friesNext();
-    
-
+    document.querySelector(".text1").setAttribute('hidden', true);
+    document.querySelector(".text2").setAttribute('hidden', true);
+    document.querySelector(".text3").setAttribute('hidden', true);
+    t2.style.opacity = '1';
+    t2.style.pointerEvents = 'all'; // Make the new text clickable if needed
   }, 500); // 500ms makes them overlap slightly for a smoother look
   textNum = textNum + 1;
   console.log("textNum is " + textNum)
-  document.querySelector(".clickBox").setAttribute('hidden', true);
-} else{
-  console.log("AAAA the textnum is: " + textNum)
-  
+}else if (textNum === 3) {
+      const t1 = document.querySelector('.text1');
+  const t2 = document.querySelector('.text2');
+
+  // 1. Fade out the first text
+  t1.style.opacity = '0';
+  t1.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+
+  // 2. Wait a moment (optional) and fade in the second text
+  setTimeout(() => {
+    t2.style.opacity = '1';
+    t2.style.pointerEvents = 'all'; // Make the new text clickable if needed
+  }, 500); // 500ms makes them overlap slightly for a smoother look
+  textNum = textNum + 1;
+  console.log("textNum is " + textNum)
 }
 
 }
@@ -182,29 +157,6 @@ function nextPage(){
 
 }
 
-
-
-function eatPizza(){
-    playButtonClicked();
-  const t1 = document.querySelector('.eatPizza');
-  const t2 = document.querySelector('.textFries');
-
-  // 1. Fade out the first text
-  t1.style.opacity = '0';
-  t1.style.pointerEvents = 'none'; // Make it unclickable once it's fading
-
-  // 2. Wait a moment (optional) and fade in the second text
-  setTimeout(() => {
-    t2.style.opacity = '1';
-    t2.style.pointerEvents = 'all'; // Make the new text clickable if needed
-    document.body.style.backgroundImage = "url('PizzaSnatch.png')";
-    console.log("Pizza was snatched")
-  }, 500); // 500ms makes them overlap slightly for a smoother look
-
-}
-
-
-
 function friesNext() {
   playButtonClicked();
   const t1 = document.querySelector('.textFries');
@@ -213,12 +165,12 @@ function friesNext() {
   // 1. Fade out the first text
   t1.style.opacity = '0';
   t1.style.pointerEvents = 'none'; // Make it unclickable once it's fading
-  
 
   // 2. Wait a moment (optional) and fade in the second text
   setTimeout(() => {
     t2.style.opacity = '1';
     t2.style.pointerEvents = 'all'; // Make the new text clickable if needed
+    document.querySelector(t1).setAttribute('hidden', true);
     document.querySelector(".text1").setAttribute('hidden', true);
     document.querySelector(".text3").setAttribute('hidden', true);
     document.querySelector(".text4").setAttribute('hidden', true);
@@ -246,24 +198,15 @@ function swapText() {
 function swapText2() {
   const t1 = document.querySelector('.text2');
   const t2 = document.querySelector('.text3');
-  const t3 = document.querySelector('.text4');
-  const clickBox = document.querySelector('.clickBox');
 
   // 1. Fade out the first text
   t1.style.opacity = '0';
   t1.style.pointerEvents = 'none'; // Make it unclickable once it's fading
-    clickBox.style.opacity = '0';
-  clickBox.style.pointerEvents = 'none'; // Make it unclickable once it's fading
-  document.querySelector(".clickBox").setAttribute('hidden', true);
-  console.log("WHY THE FUCK ISNT IT GOING AWAYYY oh wait hey idiot the box is getting clicked not the text")
 
   // 2. Wait a moment (optional) and fade in the second text
   setTimeout(() => {
     t2.style.opacity = '1';
     t2.style.pointerEvents = 'all'; // Make the new text clickable if needed
-    t3.style.opacity = '1';
-    t3.style.pointerEvents = 'all'; // Make the new text clickable if needed
-    document.querySelector(".clickBox").setAttribute('hidden', true);
   }, 500); // 500ms makes them overlap slightly for a smoother look
 }
 
@@ -271,8 +214,6 @@ function swapFries() {
   const t1 = document.querySelector('.text3');
   const t2 = document.querySelector('.text4');
   const t3 = document.querySelector('.textFries');
-  const t4 = document.querySelector('.eatPizza');
-  const t5 = document.querySelector('.clickBox');
 
   // 1. Fade out the first text
   t1.style.opacity = '0';
@@ -280,19 +221,11 @@ function swapFries() {
   t2.style.opacity = '0';
   t2.style.pointerEvents = 'none'; // Make it unclickable once it's fading
   playButtonClicked();
-  var omnomnom = new Audio('omnomnom.mp3');
-  omnomnom.play();
 
   // 2. Wait a moment (optional) and fade in the second text
   setTimeout(() => {
-    document.body.style.backgroundImage = "url('pizza.png')";
-    
-  document.querySelector('.clickBox').removeAttribute('hidden');
-  console.log("click box is unhidden cuz of swapfries")
-    t4.style.opacity = '1';
-    t4.style.pointerEvents = 'all'; // Make the new text clickable if needed
-        t5.style.opacity = '1';
-    t5.style.pointerEvents = 'all'; // Make the new text clickable if needed
+    t3.style.opacity = '1';
+    t3.style.pointerEvents = 'all'; // Make the new text clickable if needed
   }, 500); // 500ms makes them overlap slightly for a smoother look
 }
 
@@ -349,9 +282,9 @@ function activateSecondMenu() {
   
     // And hides the intro
     document.querySelector('.firstMenu').setAttribute('hidden', true);
-    playAudio();
+    beachBackgroundAudiofunction();
     console.log("Audio's running now :o");
-    document.body.style.backgroundImage = "url('menuPic.png')";
+    document.body.style.backgroundImage = "url('capitolaBeach.webp')";
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundRepeat = "no-repeat";
@@ -384,19 +317,7 @@ function activateStartGame() {
 
 
     
-const positionElement = document.getElementById('position-log');
-        // Add a mousemove event listener to the entire document
-        document.addEventListener('mousemove', (event) => {
-            // Get the X and Y coordinates from the event object
-            const x = event.clientX; // X coordinate relative to the viewport
-            const y = event.clientY; // Y coordinate relative to the viewport
-            if (teeth == 1){
-                moveMoused();
-            }
 
-            // Update the text content to display the current position
-            positionElement.textContent = `Mouse Position: (X: ${x}, Y: ${y})`;
-        });
 
 const ugh = 1;
 
@@ -417,7 +338,7 @@ console.log("Audio elem:", buttonClicksound);
 function buttonclickSound() {
     buttonClicksound.play();
     buttonClicksound.volume = 1;
-    console.log("clicky noise go!");
+    console.log("play button was clickedy clacked");
 }
 
 function playAudio() {
@@ -430,7 +351,7 @@ function playAudio() {
 function beachBackgroundAudiofunction() {
   beachBackgroundAudio.loop = true;
   beachBackgroundAudio.play();
-  beachBackgroundAudio.volume = 0.1;
+  beachBackgroundAudio.volume = 0.2;
   console.log("beach audio is playing");
 }
 
