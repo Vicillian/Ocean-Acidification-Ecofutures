@@ -26,7 +26,7 @@
 
 
 
-<div class="firstMenu">
+<div class="firstMenu" style="background-color: yellow;">
     
         <button style="display: flex; position: relative; left: 45%; top: 290px;" type="button" onclick="activateSecondMenu()">Start Game Test</button>
     
@@ -67,7 +67,7 @@
     </p>
     <p class="text3" onclick="swapFries()" style="transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: 430px; top: 50px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">
       You choose to: <br> <br>
-      1. Take bite of pizza
+      1. Take bite of pizza (only this one works right now)
     </p>
     <p class="text4" onclick="swapPizza()" style="transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: 430px; top: 50px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">
       2. Take bite of Fries
@@ -280,7 +280,7 @@ function swapFries() {
   t2.style.opacity = '0';
   t2.style.pointerEvents = 'none'; // Make it unclickable once it's fading
   playButtonClicked();
-  var omnomnom = new Audio('omnomnom.mp3');
+  var omnomnom = new Audio('nomnomnom.mp3');
   omnomnom.play();
 
   // 2. Wait a moment (optional) and fade in the second text
