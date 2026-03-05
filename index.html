@@ -80,9 +80,31 @@
 
     <p></p>
 
+  <div class="text-container" style="position: relative; cursor: pointer;">
+    <p class="text1" onclick="swapText()" style="transition: opacity 1s; opacity: 1; pointer-events: none;display: flex; position: relative; left: 440px; top: 310px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">It's a sunny day at Capitola Beach, a person is walking down the street with <br>a slice of pizza and fries. The day has had a different feel to it. Gloom <br>lingers in the air as the birds squawk at tourists nearby. <br>You try to enjoy your warm food.</p>
 
-    <p style="display: flex; position: relative; left: 440px; top: 310px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">It's a sunny day at Capitola Beach, a person is walking down the street with <br>a slice of pizza and fries. The day has had a different feel to it. Gloom <br>lingers in the air as the birds squawk at tourists nearby. <br>You try to enjoy your warm food. </p>
+    <p class="text2" onclick="swapText2()" style="transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: 430px; top: 150px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">
+      Nothing better than a Maui Wowie pizza from Pizza My Heart & French fries.
+    </p>
+    <p class="text3" onclick="swapFries()" style="transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: 430px; top: 100px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">
+      1. Reach for fries
+    </p>
+    <p class="text4" onclick="swapPizza()" style="transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: 430px; top: 100px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">
+      2. Take bite of pizza
+    </p>
+    <p class="textFries" onclick="friesNext()" style="transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: 430px; top: -30px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">
+      A Seagull snatches up your Fries. Darn Seagulls.. <br>Back in your day Seagulls never snatched food. They politely <br>asked for the food. And helped grandmas cross the street. <br>Now that you think about it.. Seagulls..
+    </p>
+  </div>
+    <p class="text7" onclick="nextPage()" style="transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: 430px; top: -180px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">
+      <a href="startStory.html">KAKAWKAKAWKAKAWKWAKAWKAWKAWKAWKAWKAWKAW </a></p>
+    </p>
 
+    <button class="clickBox" style="background: none; border: none; cursor: pointer;display: flex; position: relative; left: 350px; top: -300px;">
+        <img src="clickBox.png" alt="Start Game" height="300px" width="820px"  style="display: flex; " onclick="buttonTester()">
+    </button>
+    <!--<p style="display: flex; position: relative; left: 440px; top: 310px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">It's a sunny day at Capitola Beach, a person is walking down the street with <br>a slice of pizza and fries. The day has had a different feel to it. Gloom <br>lingers in the air as the birds squawk at tourists nearby. <br>You try to enjoy your warm food. </p>
+-->
 </div>
 
 
@@ -96,6 +118,130 @@
 
 
 <script>
+var textNum = 0;
+function textSwapFunction(){
+
+if (textNum === 0) {
+  const t1 = document.querySelector('.text1');
+  const t2 = document.querySelector('.text2');
+
+  // 1. Fade out the first text
+  t1.style.opacity = '0';
+  t1.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+
+  // 2. Wait a moment (optional) and fade in the second text
+  setTimeout(() => {
+    t2.style.opacity = '1';
+    t2.style.pointerEvents = 'all'; // Make the new text clickable if needed
+  }, 500); // 500ms makes them overlap slightly for a smoother look
+  textNum = textNum + 1;
+  console.log("textNum is " + textNum)
+}else if(textNum === 1) {
+  const t1 = document.querySelector('.text2');
+  const t2 = document.querySelector('.text3');
+  const t3 = document.querySelector('.text4');
+  const t4 = document.querySelector('.clickBox');
+
+  // 1. Fade out the first text
+  t1.style.opacity = '0';
+  t1.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+  t4.style.opacity = '0';
+  t4.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+
+  // 2. Wait a moment (optional) and fade in the second text
+  setTimeout(() => {
+    t2.style.opacity = '1';
+    t2.style.pointerEvents = 'all'; // Make the new text clickable if needed
+    t3.style.opacity = '1';
+    t3.style.pointerEvents = 'all'; // Make the new text clickable if needed
+  }, 500); // 500ms makes them overlap slightly for a smoother look
+  textNum = textNum + 1;
+  console.log("textNum is " + textNum)
+  document.querySelector('.clickBox').setAttribute('hidden', true);
+}
+
+}
+
+//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+function nextPage(){
+
+}
+
+function friesNext() {
+  const t1 = document.querySelector('.textFries');
+  const t2 = document.querySelector('.text7');
+
+  // 1. Fade out the first text
+  t1.style.opacity = '0';
+  t1.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+
+  // 2. Wait a moment (optional) and fade in the second text
+  setTimeout(() => {
+    t2.style.opacity = '1';
+    t2.style.pointerEvents = 'all'; // Make the new text clickable if needed
+    document.querySelector(t1).setAttribute('hidden', true);
+    document.querySelector(".text1").setAttribute('hidden', true);
+    document.querySelector(".text3").setAttribute('hidden', true);
+    document.querySelector(".text4").setAttribute('hidden', true);
+    document.querySelector(".text2").setAttribute('hidden', true);
+  }, 500); // 500ms makes them overlap slightly for a smoother look
+}
+
+
+
+function swapText() {
+  const t1 = document.querySelector('.text1');
+  const t2 = document.querySelector('.text2');
+
+  // 1. Fade out the first text
+  t1.style.opacity = '0';
+  t1.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+
+  // 2. Wait a moment (optional) and fade in the second text
+  setTimeout(() => {
+    t2.style.opacity = '1';
+    t2.style.pointerEvents = 'all'; // Make the new text clickable if needed
+  }, 500); // 500ms makes them overlap slightly for a smoother look
+}
+
+function swapText2() {
+  const t1 = document.querySelector('.text2');
+  const t2 = document.querySelector('.text3');
+  const t3 = document.querySelector('.text4');
+
+  // 1. Fade out the first text
+  t1.style.opacity = '0';
+  t1.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+
+  // 2. Wait a moment (optional) and fade in the second text
+  setTimeout(() => {
+    t2.style.opacity = '1';
+    t2.style.pointerEvents = 'all'; // Make the new text clickable if needed
+    t3.style.opacity = '1';
+    t3.style.pointerEvents = 'all'; // Make the new text clickable if needed
+  }, 500); // 500ms makes them overlap slightly for a smoother look
+}
+
+function swapFries() {
+  const t1 = document.querySelector('.text3');
+  const t2 = document.querySelector('.text4');
+  const t3 = document.querySelector('.textFries');
+
+  // 1. Fade out the first text
+  t1.style.opacity = '0';
+  t1.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+  t2.style.opacity = '0';
+  t2.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+
+  // 2. Wait a moment (optional) and fade in the second text
+  setTimeout(() => {
+    t3.style.opacity = '1';
+    t3.style.pointerEvents = 'all'; // Make the new text clickable if needed
+  }, 500); // 500ms makes them overlap slightly for a smoother look
+}
+
+
 
 function gotoFish() {
   window.location.href = "startStory.html";
@@ -105,6 +251,8 @@ function gotoFish() {
 function buttonTester() {
 
   buttonclickSound();
+  //swapText();
+  textSwapFunction();
   
 }
 
