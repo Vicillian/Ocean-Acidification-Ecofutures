@@ -67,7 +67,7 @@
     </p>
     <p class="text3" onclick="swapFries()" style="transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: 430px; top: 50px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">
       You choose to: <br> <br>
-      1. Take bite of pizza (only this one works right now)
+      1. Take bite of pizza
     </p>
     <p class="text4" onclick="swapPizza()" style="transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: 430px; top: 50px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">
       2. Take bite of Fries
@@ -80,17 +80,17 @@
       <a href="divergenceScene.html">KAW KA KAW KA KAWWWW KAWWW SEAGULL KAWWWW </a></p>
     </p>
 
-    <button class="clickBox" style="background: none; border: none; cursor: pointer;display: flex; position: relative; left: 350px; top: -380px;">
-        <img src="clickBox.png" alt="Start Game" height="300px" width="820px"  style="display: flex; " onclick="buttonTester()">
+    <button class="clickBox" style="background: none; border: none; cursor: pointer;display: flex; position: relative; left: -30px; top: -950px;">
+        <img src="clickBox.png" alt="Start Game" height="900px" width="1600px"  style="display: flex; " onclick="buttonTester()">
     </button>
     <!--<p style="display: flex; position: relative; left: 440px; top: 310px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">It's a sunny day at Capitola Beach, a person is walking down the street with <br>a slice of pizza and fries. The day has had a different feel to it. Gloom <br>lingers in the air as the birds squawk at tourists nearby. <br>You try to enjoy your warm food. </p>
 -->
 
-    <p class="eatPizza" onclick="eatPizza()" style="cursor: pointer; transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: 430px; top: -600px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">
+    <p class="eatPizza" onclick="eatPizza()" style="cursor: pointer; transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: 430px; top: -1200px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">
       You take a bite of your Pizza<br>
       on nom nom
     </p>
-    <p class="eatFries" onclick="eatedFries()" style="cursor: pointer; transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: 430px; top: -740px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">
+    <p class="eatFries" onclick="eatedFries()" style="cursor: pointer; transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: 430px; top: -1330px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">
       You take a bite of your Fries<br>
       Box and all.. Freak.<br>
       on nom nom
@@ -153,6 +153,14 @@ if (textNum === 0) {
   console.log("textNum is " + textNum)
   document.querySelector(".clickBox").setAttribute('hidden', true);
 }else if(textNum === 2) {
+  eatedFries();
+eatPizza();
+
+  textNum = textNum + 1;
+  console.log("textNum is " + textNum)
+  document.querySelector(".clickBox").setAttribute('hidden', true);
+  console.log("KCAKAWWW KAKAWWW")
+}else if(textNum === 3) {
   const t1 = document.querySelector('.textFries');
   const t2 = document.querySelector('.text3');
   const t3 = document.querySelector('.text4');
@@ -169,6 +177,7 @@ if (textNum === 0) {
   setTimeout(() => {
     document.querySelector(".clickBox").setAttribute('hidden', true);
     friesNext();
+    
     
 
   }, 500); // 500ms makes them overlap slightly for a smoother look
@@ -228,6 +237,7 @@ function eatPizza(){
   // 1. Fade out the first text
   t1.style.opacity = '0';
   t1.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+  SQUAKSQUAKSWQUAK();
 
   // 2. Wait a moment (optional) and fade in the second text
   setTimeout(() => {
@@ -250,6 +260,7 @@ function eatedFries(){
   t1.style.pointerEvents = 'none'; // Make it unclickable once it's fading
   t3.style.opacity = '0';
   t3.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+  SQUAKSQUAKSWQUAK();
 
   // 2. Wait a moment (optional) and fade in the second text
   setTimeout(() => {
@@ -262,6 +273,18 @@ function eatedFries(){
 
 }
 
+function SQUAKSQUAKSWQUAK(){
+
+  startFadeIn();
+
+  // 2. Wait a moment (optional) and fade in the second text
+  setTimeout(() => {
+
+    console.log("Squak Swquak")
+    startFadeOut();
+  }, 3000); // 500ms makes them overlap slightly for a smoother look
+
+}
 
 
 function friesNext() {
@@ -540,7 +563,7 @@ function startFadeOut() {
     const fadeAudioOut = function () {
         if (myAudio.volume > 0.01) {
             myAudio.volume -= 0.01; // Decrease volume step
-            fadeTimer = setTimeout(fadeAudioOut, 10); // Repeat every 10ms
+            fadeTimer = setTimeout(fadeAudioOut, 20); // Repeat every 10ms
         } else {
             myAudio.volume = 0; // Ensure volume reaches exactly 0
             myAudio.pause(); // Pause when silent

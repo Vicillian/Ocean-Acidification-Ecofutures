@@ -55,15 +55,15 @@
     <p class="text4" style="transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: 430px; top: -100px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">
         Seagull is aware that there is something odd going on with the ocean, <br>as many animals are acting weird and different from their usual self. <br>Seagull learns by each visit that something is happening with <br>the ocean and climate change.
     </p>
-            <p class="text5" style="transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: 430px; top: -270px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">
-     [End of Early Test]
+    <p class="text5" style="transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: 430px; top: -270px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">
+     Im such a fat fucckin chud
     </p>
 
   </div>
 
 
-    <button class="clickBox" style="background: none; border: none; cursor: pointer;display: flex; position: relative; left: 350px; top:-400px;">
-        <img src="clickBox.png" alt="Start Game" height="300px" width="820px"  style="display: flex; " onclick="buttonTester()">
+    <button class="clickBox" style="background: none; border: none; cursor: pointer;display: flex; position: relative; left: -7px; top:-960px;">
+        <img src="clickBox.png" alt="Start Game" height="900px" width="1600px"  style="display: flex; " onclick="buttonTester()">
     </button>
     <!--<p style="display: flex; position: relative; left: 440px; top: 310px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">It's a sunny day at Capitola Beach, a person is walking down the street with <br>a slice of pizza and fries. The day has had a different feel to it. Gloom <br>lingers in the air as the birds squawk at tourists nearby. <br>You try to enjoy your warm food. </p>
 -->
@@ -137,7 +137,26 @@ if (textNum === 0) {
   console.log("textNum is " + textNum)
 }else if (textNum === 3) {
       const t1 = document.querySelector('.text4');
-  const t2 = document.querySelector('.text5');
+  //const t2 = document.querySelector('.text5');
+
+  // 1. Fade out the first text
+  t1.style.opacity = '0';
+  t1.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+    const t3 = document.querySelector('.clickBox');
+
+  // 2. Wait a moment (optional) and fade in the second text
+  setTimeout(() => {
+    //t2.style.opacity = '1';
+   // t2.style.pointerEvents = 'all'; // Make the new text clickable if needed
+    document.body.style.backgroundImage = "url('PizzaSnatch.png')";
+    console.log("background changed to map1")
+  }, 2000); // 500ms makes them overlap slightly for a smoother look
+  textNum = textNum + 1;
+  console.log("textNum was 3 is " + textNum)
+}else if (textNum === 4) {
+      const t1 = document.querySelector('.text5');
+  const t2 = document.querySelector('.text6');
+  const t3 = document.querySelector('.clickBox');
 
   // 1. Fade out the first text
   t1.style.opacity = '0';
@@ -147,9 +166,11 @@ if (textNum === 0) {
   setTimeout(() => {
     t2.style.opacity = '1';
     t2.style.pointerEvents = 'all'; // Make the new text clickable if needed
-  }, 500); // 500ms makes them overlap slightly for a smoother look
+    document.body.style.backgroundImage = "url('PizzaSnatch.png')";
+    console.log("background changed to map2")
+  }, 2000); // 500ms makes them overlap slightly for a smoother look
   textNum = textNum + 1;
-  console.log("textNum was 3 is " + textNum)
+  console.log("textNum was 4 is " + textNum)
 } else {
     window.location.href = "startStory.html";
 }
