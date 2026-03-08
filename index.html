@@ -73,7 +73,7 @@
       2. Take bite of Fries
     </p>
     <p class="textFries" onclick="friesNext()" style="transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: 430px; top: -100px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">
-      A Seagull snatches up your Fries. Darn Seagulls.. <br>Back in your day Seagulls never snatched food. They politely <br>asked for the food. And helped grandmas cross the street. <br>Now that you think about it.. Seagulls..
+      A Seagull snatches up your Food. Darn Seagulls.. <br>Back in your day Seagulls never snatched food. They politely <br>asked for the food. And helped grandmas cross the street. <br>Now that you think about it.. Seagulls..
     </p>
   </div>
     <p class="text7" onclick="nextPage()" style="transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: 430px; top: -200px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">
@@ -90,12 +90,18 @@
       You take a bite of your Pizza<br>
       on nom nom
     </p>
+    <p class="eatFries" onclick="eatedFries()" style="cursor: pointer; transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: 430px; top: -740px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">
+      You take a bite of your Fries<br>
+      Box and all.. Freak.<br>
+      on nom nom
+    </p>
 
 </div>
 
 
     <audio id="sadViolin" src="sadViolin.mp3"></audio>
     <audio id="buttonClick" src="buttonClick.mp3"></audio>
+    <audio id="seagullflyaway" src="seagul.mp3"></audio>
     <audio id="beachBackgroundAudio" src="seagullNoises.m4a"></audio>
     <!------------------------------------------------------------------------------------------------------------------------------------>
     </body>
@@ -178,6 +184,36 @@ if (textNum === 0) {
 
 //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
+function swapPizza() {
+
+  //Vic's note. This is for the fries not thepizza. Yeah its kindve confusing. MIght fix might not. Who honestly knows anymore man its 5 am. Christine has woken up and gone to work already. Eric probably is asleep. Jason? God he's probably on his way to his security station by now. Me? stuck in my room. With these seagulls hounding. Waves crashing agains the border between sea and sand. Grace? probably gonan send a text about another cute boy again or if i think some girl is cute or not. It's over. Where am I how am I. Who am I
+  const t1 = document.querySelector('.text3');
+  const t2 = document.querySelector('.text4');
+  const t4 = document.querySelector('.eatFries');
+  const t5 = document.querySelector('.clickBox');
+
+  // 1. Fade out the first text
+  t1.style.opacity = '0';
+  t1.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+  t2.style.opacity = '0';
+  t2.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+  playButtonClicked();
+  var omnomnom = new Audio('nomnomnom.mp3');
+  omnomnom.play();
+
+  // 2. Wait a moment (optional) and fade in the second text
+  setTimeout(() => {
+  document.querySelector('.clickBox').removeAttribute('hidden');
+  console.log("click box is unhidden cuz of swapfries")
+    t4.style.opacity = '1';
+    t4.style.pointerEvents = 'all'; // Make the new text clickable if needed
+        t5.style.opacity = '1';
+    t5.style.pointerEvents = 'all'; // Make the new text clickable if needed
+    document.body.style.backgroundImage = "url('Fries.png')";
+    
+  }, 500); // 500ms makes them overlap slightly for a smoother look
+}
+
 function nextPage(){
 
 }
@@ -197,6 +233,29 @@ function eatPizza(){
   setTimeout(() => {
     t2.style.opacity = '1';
     t2.style.pointerEvents = 'all'; // Make the new text clickable if needed
+    document.body.style.backgroundImage = "url('PizzaSnatch.png')";
+    console.log("Pizza was snatched")
+  }, 500); // 500ms makes them overlap slightly for a smoother look
+
+}
+
+function eatedFries(){
+    playButtonClicked();
+  const t1 = document.querySelector('.eatPizza');
+  const t3 = document.querySelector('.eatFries');
+  const t2 = document.querySelector('.textFries');
+
+  // 1. Fade out the first text
+  t1.style.opacity = '0';
+  t1.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+  t3.style.opacity = '0';
+  t3.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+
+  // 2. Wait a moment (optional) and fade in the second text
+  setTimeout(() => {
+    t2.style.opacity = '1';
+    t2.style.pointerEvents = 'all'; // Make the new text clickable if needed
+
     document.body.style.backgroundImage = "url('PizzaSnatch.png')";
     console.log("Pizza was snatched")
   }, 500); // 500ms makes them overlap slightly for a smoother look
@@ -455,6 +514,41 @@ function dissolveElement(elementId) {
   }, { once: true });
 }
 
+let fadeTimer;
+
+function startFadeIn() {
+    clearTimeout(fadeTimer);
+    const myAudio = document.getElementById('seagullflyaway');
+    myAudio.volume = 0; // Start at 0 volume
+    myAudio.play();
+    
+    const fadeAudioIn = function () {
+        if (myAudio.volume < 1) {
+            myAudio.volume += 0.01; // Increase volume step
+            fadeTimer = setTimeout(fadeAudioIn, 10); // Repeat every 10ms
+        } else {
+            myAudio.volume = 1; // Ensure volume reaches exactly 1
+        }
+    };
+    fadeAudioIn();
+}
+
+function startFadeOut() {
+    clearTimeout(fadeTimer);
+    const myAudio = document.getElementById('seagullflyaway');
+    
+    const fadeAudioOut = function () {
+        if (myAudio.volume > 0.01) {
+            myAudio.volume -= 0.01; // Decrease volume step
+            fadeTimer = setTimeout(fadeAudioOut, 10); // Repeat every 10ms
+        } else {
+            myAudio.volume = 0; // Ensure volume reaches exactly 0
+            myAudio.pause(); // Pause when silent
+            myAudio.currentTime = 0; // Reset playback position
+        }
+    };
+    fadeAudioOut();
+}
 
 
     
