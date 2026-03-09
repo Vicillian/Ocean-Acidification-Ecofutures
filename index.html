@@ -110,6 +110,7 @@
 
 
 <script>
+let chosenFood = 0;
 var textNum = 0;
 function textSwapFunction(){
 
@@ -160,7 +161,10 @@ eatPizza();
   console.log("textNum is " + textNum)
   document.querySelector(".clickBox").setAttribute('hidden', true);
   console.log("KCAKAWWW KAKAWWW")
+  console.log("text num WAS === 2 but now it's 3")
+  console.log("The eat fries box or ate a bite of pizza text is gone now")
 }else if(textNum === 3) {
+  console.log("text num is currently === 3")
   const t1 = document.querySelector('.textFries');
   const t2 = document.querySelector('.text3');
   const t3 = document.querySelector('.text4');
@@ -177,6 +181,23 @@ eatPizza();
   setTimeout(() => {
     document.querySelector(".clickBox").setAttribute('hidden', true);
     friesNext();
+    console.log("THESE IS THE POINTE WHERE KAW KAW KAW KAW")
+    console.log(chosenFood)
+    console.log(chosenFood)
+    console.log(chosenFood)
+    console.log(chosenFood)
+    console.log(chosenFood)
+    console.log(chosenFood)
+if (chosenFood === 1) { //---------------------------------------------------------------
+  console.log("funny if statement go. Pizza mode activate.")
+  console.log("Chosen food was "+chosenFood)
+  document.body.style.backgroundImage = "url('Steve_the_Seagull_Pizza_Red.png')";
+}else if(chosenFood === 0){
+  chosenFood = 3;
+  console.log("Chosen food was "+chosenFood)
+  console.log("I think this one is the Fries was picked")
+  document.body.style.backgroundImage = "url('Steve_the_Seagull_Fries_Red.png')";
+}
     
     
 
@@ -206,10 +227,14 @@ function swapPizza() {
   t1.style.pointerEvents = 'none'; // Make it unclickable once it's fading
   t2.style.opacity = '0';
   t2.style.pointerEvents = 'none'; // Make it unclickable once it's fading
-  playButtonClicked();
+  buttonclickSound();
   var omnomnom = new Audio('nomnomnom.mp3');
   omnomnom.play();
-
+  chosenFood = 0;
+  console.log("fries were chosen THE FRIIIIES")
+  console.log(chosenFood)
+  console.log(chosenFood)
+  console.log(chosenFood)
   // 2. Wait a moment (optional) and fade in the second text
   setTimeout(() => {
   document.querySelector('.clickBox').removeAttribute('hidden');
@@ -230,9 +255,11 @@ function nextPage(){
 
 
 function eatPizza(){
-    playButtonClicked();
+    buttonclickSound();
   const t1 = document.querySelector('.eatPizza');
   const t2 = document.querySelector('.textFries');
+
+  
 
   // 1. Fade out the first text
   t1.style.opacity = '0';
@@ -250,11 +277,11 @@ function eatPizza(){
 }
 
 function eatedFries(){
-    playButtonClicked();
+    buttonclickSound();
   const t1 = document.querySelector('.eatPizza');
   const t3 = document.querySelector('.eatFries');
   const t2 = document.querySelector('.textFries');
-
+  console.log(chosenFood + "FRIIIIIIIIIES")
   // 1. Fade out the first text
   t1.style.opacity = '0';
   t1.style.pointerEvents = 'none'; // Make it unclickable once it's fading
@@ -282,19 +309,22 @@ function SQUAKSQUAKSWQUAK(){
 
     console.log("Squak Swquak")
     startFadeOut();
-  }, 3000); // 500ms makes them overlap slightly for a smoother look
+  }, 2000); // 500ms makes them overlap slightly for a smoother look
 
 }
 
 
+
 function friesNext() {
-  playButtonClicked();
+  buttonclickSound();
   const t1 = document.querySelector('.textFries');
   const t2 = document.querySelector('.text7');
+
 
   // 1. Fade out the first text
   t1.style.opacity = '0';
   t1.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+
   
 
   // 2. Wait a moment (optional) and fade in the second text
@@ -355,13 +385,18 @@ function swapFries() {
   const t3 = document.querySelector('.textFries');
   const t4 = document.querySelector('.eatPizza');
   const t5 = document.querySelector('.clickBox');
-
+  console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+  console.log(chosenFood);
+  console.log(chosenFood);
+  console.log(chosenFood);
+  console.log(chosenFood);
+  console.log(chosenFood);
   // 1. Fade out the first text
   t1.style.opacity = '0';
   t1.style.pointerEvents = 'none'; // Make it unclickable once it's fading
   t2.style.opacity = '0';
   t2.style.pointerEvents = 'none'; // Make it unclickable once it's fading
-  playButtonClicked();
+  buttonclickSound();
   var omnomnom = new Audio('nomnomnom.mp3');
   omnomnom.play();
 
@@ -374,6 +409,9 @@ function swapFries() {
         t5.style.opacity = '1';
     t5.style.pointerEvents = 'all'; // Make the new text clickable if needed
     document.body.style.backgroundImage = "url('Pizza.png')";
+    chosenFood = 1;
+  console.log(chosenFood + "PIZZA WAS CHOSEN")
+  console.log("CHOSEN FOOD NUM IS " + chosenFood)
     
   }, 500); // 500ms makes them overlap slightly for a smoother look
 }
@@ -410,10 +448,12 @@ function startStory() { // WHEN THE PLAYER ACTUALLY CLICKS THE REAL PLAY BUTTON
     document.querySelector('.secondMenu').setAttribute('hidden', true);
     pauseAudio();
     console.log("Audio should be paused now");
-    document.body.style.backgroundImage = "url('background1.jpg')";
+    document.body.style.backgroundImage = "url('background1.png')";
     beachBackgroundAudiofunction();
     console.log("ts is called");
     document.querySelector('#fadeOverlay').setAttribute('hidden', true);
+    console.log("the game actually just started")
+    
   }, 500); //Good was 2500/2.5 sec
 }
 
@@ -421,6 +461,7 @@ function playButtonClicked() {
 
     buttonclickSound();
     startStory();
+
 
 }
 
@@ -461,6 +502,7 @@ function activateStartGame() {
     console.log("Audio should be paused now");
 
     document.body.style.backgroundImage = "url('background1.jpeg')";
+
 
 }
 
@@ -547,7 +589,7 @@ function startFadeIn() {
     
     const fadeAudioIn = function () {
         if (myAudio.volume < 1) {
-            myAudio.volume += 0.01; // Increase volume step
+            myAudio.volume += 1; // Increase volume step
             fadeTimer = setTimeout(fadeAudioIn, 10); // Repeat every 10ms
         } else {
             myAudio.volume = 1; // Ensure volume reaches exactly 1
