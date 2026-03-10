@@ -8,9 +8,9 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
     </head>
 
-    <body class="" style="overflow: hidden;">
+    <body class="" style="">
 
-<!-- dis is de black overlay so page can fade out wagwan man -->
+<!-- dis is de black overlay so page can fade out wagwan man overflow: hidden;-->
 <div id="fadeOverlay" style="
   position: fixed; 
   top: 0; 
@@ -39,7 +39,7 @@
 <div class="secondMenu" hidden>
 
     <button style="background: none; border: none; cursor: pointer;display: flex; position: relative; left: 350px; top: 550px;">
-        <img src="textBox.png" alt="Start Game" height="300px" width="820px"  style="display: flex; " onclick="buttonTester()">
+        <img class="theTextBox" src="textBox.png" alt="Start Game" height="300px" width="820px"  style="display: flex; " onclick="buttonTester()">
     </button>
 
 
@@ -62,11 +62,63 @@
   </div>
 
 
-    <button class="clickBox" style="background: none; border: none; cursor: pointer;display: flex; position: relative; left: -7px; top:-960px;">
+    <button class="clickBox" style="background: none; border: none; cursor: pointer; display: flex; position: relative; left: -7px; top:-960px;">
         <img src="clickBox.png" alt="Start Game" height="900px" width="1600px"  style="display: flex; " onclick="buttonTester()">
+    </button>
+
+
+
+    <button class="MusselIcon" style="background: none; border: none;transition: opacity 1s; opacity: 0; pointer-events: none; display: flex; position: relative; left: 60px; top:-1660px;">
+        <img src="TheElderMussel.png" height="200px" width="200px" alt="Start Game" style="display: flex; " onclick="iconTester()">
+    </button>
+    <button class="SealionIcon" style="background: none; border: none;transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: 600px; top:-1830px;">
+        <img src="Seal.png" height="200px" width="200px" alt="Start Game" style="display: flex; " onclick="sealClicked()">
+    </button>
+
+    <button class="crabIcon" style="background: none; border: none;transition: opacity 1s; opacity: 0; pointer-events: none; display: flex; position: relative; left: 200px; top:-1650px;">
+        <img src="Mrs.DungunessCrab.png" height="200px" width="200px" alt="Start Game" style="display: flex; " onclick="iconTester()">
+    </button>
+    <button class="salmonIcon" style="background: none; border: none;transition: opacity 1s; opacity: 0; pointer-events: none; display: flex; position: relative; left: 1000px; top:-1950px;">
+        <img src="CohoTheBroho.png" height="200px" width="200px" alt="Start Game" style="display: flex; " onclick="iconTester()">
     </button>
     <!--<p style="display: flex; position: relative; left: 440px; top: 310px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">It's a sunny day at Capitola Beach, a person is walking down the street with <br>a slice of pizza and fries. The day has had a different feel to it. Gloom <br>lingers in the air as the birds squawk at tourists nearby. <br>You try to enjoy your warm food. </p>
 -->
+
+
+<div class="sealTextblurb1" style="transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: 430px; top: -2050px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">
+    <p class="sealTextblurbSub1">
+      Seagull visits Sea Lions, but noticed that sea lion isn't feeling well. <br>
+    </p>
+    <p class="sealTextblurbSub2" hidden> 
+      <b>Steven Seagull</b> <br>
+      "Hi there is sea lion!""
+    </p>
+    <p class="sealTextblurbSub3" hidden> 
+      <b>Sea Lion</b> <br>
+      (sadly) "Hi there seagull"
+    </p>
+    <p class="sealTextblurbSub4" hidden> 
+      <b>Steven Seagull</b> <br>
+      "What's wrong, sea lion you look upset?"
+    </p>
+    <p class="sealTextblurbSub5" hidden> 
+      <b>Sea Lion</b> <br>
+      "I know I'm not having a good day myself"
+    </p>
+    <p class="sealTextblurbSub6" hidden> 
+      <b>Steven Seagull</b> <br>
+      "Why is that?"
+    </p>
+    <p class="sealTextblurbSub7" hidden> 
+      <b>Sea Lion</b> <br>
+      "It's really hard for me to feed right now.<br>I've noticed that most sea lions who tend to eat fish are getting sick lately.<br>I'm afraid to be one of them too."
+    </p>
+    <p class="sealTextblurbSub8" hidden> 
+      <b>Steven Seagull</b> <br>
+      "What do you mean sick? What's going on?"
+    </p>
+</div>
+
 
 </div>
 
@@ -77,6 +129,7 @@
     <audio id="sadViolin" src="sadViolin.mp3"></audio>
     <audio id="buttonClick" src="buttonClick.mp3"></audio>
     <audio id="beachBackgroundAudio" src="seagullNoises.m4a"></audio>
+    <audio id="seagullflyaway" src="seagul.mp3"></audio>
     <!------------------------------------------------------------------------------------------------------------------------------------>
     </body>
 
@@ -85,6 +138,12 @@
 
 <script>
 var textNum = 0;
+var animalsVisited = 0;
+var sealVisited = false;
+var musselVisited = false;
+var crabVisited = false;
+var salmonVisited = false;
+var visitedAllAnimals = false;
 function textSwapFunction(){
 
 if (textNum === 0) {
@@ -102,6 +161,9 @@ if (textNum === 0) {
   }, 500); // 500ms makes them overlap slightly for a smoother look
   textNum = textNum + 1;
   console.log("textNum is " + textNum)
+  console.log("As he is flying away..")
+  SQUAKSQUAKSWQUAK();
+
 }else if(textNum === 1) {
   const t1 = document.querySelector('.text2');
   const t2 = document.querySelector('.text3');
@@ -117,6 +179,7 @@ if (textNum === 0) {
   }, 500); // 500ms makes them overlap slightly for a smoother look
   textNum = textNum + 1;
   console.log("textNum is " + textNum)
+  console.log("The ocean is darker...")
 }else if (textNum === 2) {
       const t1 = document.querySelector('.text3');
   const t2 = document.querySelector('.text4');
@@ -135,9 +198,20 @@ if (textNum === 0) {
   }, 500); // 500ms makes them overlap slightly for a smoother look
   textNum = textNum + 1;
   console.log("textNum is " + textNum)
+  console.log("Seagull is aware....")
+
+
 }else if (textNum === 3) {
       const t1 = document.querySelector('.text4');
+      const theBox = document.querySelector('.theTextBox');
   //const t2 = document.querySelector('.text5');
+  const overlay = document.getElementById('fadeOverlay');
+    overlay.style.opacity = '1';
+  overlay.style.pointerEvents = 'all'; // Prevents clicking other things while fading
+  const t6 = document.querySelector('.MusselIcon');
+  const t7 = document.querySelector('.SealionIcon');
+  const t8 = document.querySelector('.crabIcon');
+  const t9 = document.querySelector('.salmonIcon');
 
   // 1. Fade out the first text
   t1.style.opacity = '0';
@@ -146,31 +220,127 @@ if (textNum === 0) {
 
   // 2. Wait a moment (optional) and fade in the second text
   setTimeout(() => {
+        overlay.style.opacity = '0';
+    document.querySelector('#fadeOverlay').setAttribute('hidden', true);
+    console.log(".clickBox now hidden bcz trans to Map mode")
+    t3.style.opacity = '0';
+    t3.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+    theBox.style.opacity = '0';
+    theBox.style.pointerEvents = 'none'; // Make it unclickable once it's fading
     //t2.style.opacity = '1';
    // t2.style.pointerEvents = 'all'; // Make the new text clickable if needed
-    document.body.style.backgroundImage = "url('PizzaSnatch.png')";
+    document.body.style.backgroundImage = "url('bayPic.png')";
     console.log("background changed to map1")
+      t6.style.opacity = '1';
+    t6.style.pointerEvents = 'all'; // Make the new text clickable if needed
+    t7.style.opacity = '1';
+    t7.style.pointerEvents = 'all'; // Make the new text clickable if needed
+    t8.style.opacity = '1';
+    t8.style.pointerEvents = 'all'; // Make the new text clickable if needed
+    t9.style.opacity = '1';
+    t9.style.pointerEvents = 'all'; // Make the new text clickable if needed
   }, 2000); // 500ms makes them overlap slightly for a smoother look
   textNum = textNum + 1;
   console.log("textNum was 3 is " + textNum)
-}else if (textNum === 4) {
-      const t1 = document.querySelector('.text5');
-  const t2 = document.querySelector('.text6');
-  const t3 = document.querySelector('.clickBox');
+  console.log("Fade to Map with Icons now")
+  console.log("----------------------------")
+}else if (textNum === 4) { //----------------------------------------------------------------------------------------------------------------------------------------------
+  const t1 = document.querySelector('.text5');
+  const t2 = document.querySelector('.sealTextblurb1');
+  console.log(t1+" and "+t2)
+  const t6 = document.querySelector('.MusselIcon');
+  const t7 = document.querySelector('.SealionIcon');
+  const t8 = document.querySelector('.crabIcon');
+  const t9 = document.querySelector('.salmonIcon');
+  const clickBox = document.querySelector('.clickBox');
+  const theBox = document.querySelector('.theTextBox');
+
 
   // 1. Fade out the first text
   t1.style.opacity = '0';
   t1.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+    t6.style.opacity = '0';
+  t6.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+  t7.style.opacity = '0';
+  t7.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+  t8.style.opacity = '0';
+  t8.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+  t9.style.opacity = '0';
+  t9.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+    
 
   // 2. Wait a moment (optional) and fade in the second text
   setTimeout(() => {
     t2.style.opacity = '1';
     t2.style.pointerEvents = 'all'; // Make the new text clickable if needed
-    document.body.style.backgroundImage = "url('PizzaSnatch.png')";
+    document.body.style.backgroundImage = "url('SealBackground.png')";
     console.log("background changed to map2")
-  }, 2000); // 500ms makes them overlap slightly for a smoother look
-  textNum = textNum + 1;
-  console.log("textNum was 4 is " + textNum)
+    document.querySelector('.clickBox').removeAttribute('hidden');
+    clickBox.style.opacity = '1';
+    clickBox.style.pointerEvents = 'all'; // Make the new text clickable if needed
+    console.log("click box should be back now")
+    theBox.style.opacity = '1';
+    theBox.style.pointerEvents = 'all'; // Make it unclickable once it's fading
+  }, 500); // 500ms makes them overlap slightly for a smoother look
+  textNum = 5;
+  console.log("textNum was 4 is now " + textNum)
+  console.log("Seagull Visits sea lions")
+}else if (textNum === 5) { //----------------------------------------------------------------------------------------------------------------------------------------------
+  const t1 = document.getElementsByClassName("sealTextblurbSub1");
+
+  const t3 = document.getElementsByClassName("sealTextblurbSub2");
+  console.log(t1+" and "+t3)
+  document.querySelector(".sealTextblurbSub1").setAttribute('hidden', true);
+  document.querySelector(".sealTextblurbSub2").removeAttribute('hidden');
+  // 1. Fade out the first text
+    
+
+  // 2. Wait a moment (optional) and fade in the second text
+  setTimeout(() => {
+    document.body.style.backgroundImage = "url('SealBackground.png')";
+    console.log("background changed to map2")
+    console.log("click box should be back now")
+  }, 500); // 500ms makes them overlap slightly for a smoother look
+  textNum = 6;
+  console.log("textNum was 5 is now " + textNum)
+  console.log("Hi there Sea Lion...")
+}else if (textNum === 6) { //----------------------------------------------------------------------------------------------------------------------------------------------
+  const t1 = document.getElementsByClassName("sealTextblurbSub2");
+
+  const t3 = document.getElementsByClassName("sealTextblurbSub3");
+  console.log(t1+" and "+t3)
+  document.querySelector(".sealTextblurbSub2").setAttribute('hidden', true);
+  document.querySelector(".sealTextblurbSub3").removeAttribute('hidden');
+  // 1. Fade out the first text
+    
+
+  // 2. Wait a moment (optional) and fade in the second text
+  setTimeout(() => {
+    document.body.style.backgroundImage = "url('SealBackground.png')";
+    console.log("background changed to map2")
+    console.log("click box should be back now")
+  }, 500); // 500ms makes them overlap slightly for a smoother look
+  textNum = 7;
+  console.log("textNum was 6 is now " + textNum)
+  console.log("(Sadly) Hi Seagull...")
+}else if (textNum === 7) { //----------------------------------------------------------------------------------------------------------------------------------------------
+  const t1 = document.getElementsByClassName("sealTextblurbSub3");
+
+  const t3 = document.getElementsByClassName("sealTextblurbSub4");
+  console.log(t1+" and "+t3)
+  document.querySelector(".sealTextblurbSub3").setAttribute('hidden', true);
+  document.querySelector(".sealTextblurbSub4").removeAttribute('hidden');
+  // 1. Fade out the first text
+    
+
+  // 2. Wait a moment (optional) and fade in the second text
+  setTimeout(() => {
+    document.body.style.backgroundImage = "url('SealBackground.png')";
+    console.log("click box should be back now")
+  }, 500); // 500ms makes them overlap slightly for a smoother look
+  textNum = 8;
+  console.log("textNum was 7 is now " + textNum)
+  console.log("What's wrong, Sea....")
 } else {
     window.location.href = "startStory.html";
 }
@@ -183,76 +353,22 @@ function nextPage(){
 
 }
 
-function friesNext() {
-  playButtonClicked();
-  const t1 = document.querySelector('.textFries');
-  const t2 = document.querySelector('.text7');
+function sealClicked(){
+  iconTester();
+  console.log("SEEEEEEEEEEEEEEEEEAAAAAAAAAAAAAALLLL")
+  console.log("Seal was clicked.")
+  console.log("textNum was "+textNum+" but now it's 4 cuz the SEAL")
+  textNum = 4;
+  textSwapFunction();
 
-  // 1. Fade out the first text
-  t1.style.opacity = '0';
-  t1.style.pointerEvents = 'none'; // Make it unclickable once it's fading
-
-  // 2. Wait a moment (optional) and fade in the second text
-  setTimeout(() => {
-    t2.style.opacity = '1';
-    t2.style.pointerEvents = 'all'; // Make the new text clickable if needed
-    document.querySelector(t1).setAttribute('hidden', true);
-    document.querySelector(".text1").setAttribute('hidden', true);
-    document.querySelector(".text3").setAttribute('hidden', true);
-    document.querySelector(".text4").setAttribute('hidden', true);
-    document.querySelector(".text2").setAttribute('hidden', true);
-  }, 500); // 500ms makes them overlap slightly for a smoother look
 }
 
 
+function iconTester () {
+  console.log("An icon was clicked")
+  var omnomnom = new Audio('nomnomnom.mp3');
+  omnomnom.play();
 
-function swapText() {
-  const t1 = document.querySelector('.text1');
-  const t2 = document.querySelector('.text2');
-
-  // 1. Fade out the first text
-  t1.style.opacity = '0';
-  t1.style.pointerEvents = 'none'; // Make it unclickable once it's fading
-
-  // 2. Wait a moment (optional) and fade in the second text
-  setTimeout(() => {
-    t2.style.opacity = '1';
-    t2.style.pointerEvents = 'all'; // Make the new text clickable if needed
-  }, 500); // 500ms makes them overlap slightly for a smoother look
-}
-
-function swapText2() {
-  const t1 = document.querySelector('.text2');
-  const t2 = document.querySelector('.text3');
-
-  // 1. Fade out the first text
-  t1.style.opacity = '0';
-  t1.style.pointerEvents = 'none'; // Make it unclickable once it's fading
-
-  // 2. Wait a moment (optional) and fade in the second text
-  setTimeout(() => {
-    t2.style.opacity = '1';
-    t2.style.pointerEvents = 'all'; // Make the new text clickable if needed
-  }, 500); // 500ms makes them overlap slightly for a smoother look
-}
-
-function swapFries() {
-  const t1 = document.querySelector('.text3');
-  const t2 = document.querySelector('.text4');
-  const t3 = document.querySelector('.textFries');
-
-  // 1. Fade out the first text
-  t1.style.opacity = '0';
-  t1.style.pointerEvents = 'none'; // Make it unclickable once it's fading
-  t2.style.opacity = '0';
-  t2.style.pointerEvents = 'none'; // Make it unclickable once it's fading
-  playButtonClicked();
-
-  // 2. Wait a moment (optional) and fade in the second text
-  setTimeout(() => {
-    t3.style.opacity = '1';
-    t3.style.pointerEvents = 'all'; // Make the new text clickable if needed
-  }, 500); // 500ms makes them overlap slightly for a smoother look
 }
 
 
@@ -270,34 +386,11 @@ function buttonTester() {
   
 }
 
-function startStory() { // WHEN THE PLAYER ACTUALLY CLICKS THE REAL PLAY BUTTON
-  const overlay = document.getElementById('fadeOverlay');
-  
-  // 1. Make the black overlay visible (this triggers the CSS transition)
-  overlay.style.opacity = '1';
-  overlay.style.pointerEvents = 'all'; // Prevents clicking other things while fading
 
-  // 2. Wait for the fade (1500ms = 1.5 seconds) then change page
-  setTimeout(function() {
-    overlay.style.opacity = '0';
-        // This removes the 'hidden' attribute we added in HTML
-    document.querySelector('.startGame').removeAttribute('hidden');
-  
-    // And hides the intro
-    document.querySelector('.secondMenu').setAttribute('hidden', true);
-    pauseAudio();
-    console.log("Audio should be paused now");
-    document.body.style.backgroundImage = "url('background1.jpg')";
-    beachBackgroundAudiofunction();
-    console.log("ts is called");
-    document.querySelector('#fadeOverlay').setAttribute('hidden', true);
-  }, 500); //Good was 2500/2.5 sec
-}
 
 function playButtonClicked() {
 
     buttonclickSound();
-    startStory();
 
 }
 
@@ -310,7 +403,7 @@ function activateSecondMenu() {
     document.querySelector('.firstMenu').setAttribute('hidden', true);
     beachBackgroundAudiofunction();
     console.log("Audio's running now :o");
-    document.body.style.backgroundImage = "url('capitolaBeach.webp')";
+    document.body.style.backgroundImage = "url('background1.png')";
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundRepeat = "no-repeat";
@@ -325,6 +418,7 @@ function activateSecondMenu() {
   } else if (elem.msRequestFullscreen) { /* IE11 */
     elem.msRequestFullscreen();
   }
+  console.log("After a long time...")
 }
 
 // What startStory was originally to be
@@ -402,6 +496,58 @@ function dissolveElement(elementId) {
   }, { once: true });
 }
 
+
+
+//SQUAAAAAAAAAAAAAAAAAAWK SQUAAAAAAAAAAAAAAAWK AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+function SQUAKSQUAKSWQUAK(){
+
+  startFadeIn();
+
+  // 2. Wait a moment (optional) and fade in the second text
+  setTimeout(() => {
+
+    console.log("Squak Swquak")
+    startFadeOut();
+  }, 3000); // 500ms makes them overlap slightly for a smoother look
+
+}
+let fadeTimer;
+
+function startFadeIn() {
+    clearTimeout(fadeTimer);
+    const myAudio = document.getElementById('seagullflyaway');
+    myAudio.volume = 0; // Start at 0 volume
+    myAudio.play();
+    
+    const fadeAudioIn = function () {
+        if (myAudio.volume < 1) {
+            myAudio.volume += 1; // Increase volume step
+            fadeTimer = setTimeout(fadeAudioIn, 10); // Repeat every 10ms
+        } else {
+            myAudio.volume = 1; // Ensure volume reaches exactly 1
+        }
+    };
+    fadeAudioIn();
+}
+
+function startFadeOut() {
+    clearTimeout(fadeTimer);
+    const myAudio = document.getElementById('seagullflyaway');
+    
+    const fadeAudioOut = function () {
+        if (myAudio.volume > 0.01) {
+            myAudio.volume -= 0.01; // Decrease volume step
+            fadeTimer = setTimeout(fadeAudioOut, 5); // Repeat every 10ms
+        } else {
+            myAudio.volume = 0; // Ensure volume reaches exactly 0
+            myAudio.pause(); // Pause when silent
+            myAudio.currentTime = 0; // Reset playback position
+        }
+    };
+    fadeAudioOut();
+}
+
+//SQUAAAAAAAAAAAAAAAAAAAAAAAAAAWK SQUAAAAAAAAAAAAAAAAAAAAAAWK AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 
     
