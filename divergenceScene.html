@@ -109,7 +109,7 @@
     </p>
     <p class="sealTextblurbSub7" hidden> 
       <b>Sea Lion</b> <br>
-      "It's really hard for me to feed right now.<br>I've noticed that most sea lions who tend to eat fish are getting sick lately.<br>I'm afraid to be one of them too."
+      "It's really hard for me to feed right now. I've noticed that most sea lions<br>who tend to eat fish are getting sick lately. I'm afraid to be one of them too."
     </p>
     <p class="sealTextblurbSub8" hidden> 
       <b>Steven Seagull</b> <br>
@@ -117,7 +117,7 @@
     </p>
     <p class="sealTextblurbSub9" hidden> 
       <b>Sea Lion</b> <br>
-      "I don't know how to explain it.<br>But a few sea lions have been going on a frenzy when they eat some fish<br>or any contaminated food."
+      "I don't know how to explain it.. But a few sea lions have been<br>going on a frenzy when they eat some fish or any contaminated food."
     </p>
 
 
@@ -129,6 +129,7 @@
       <u>B. "Is that why you look sad?"</u>
     </p>
 
+    <!--BELOW IS QUEST WHY DO YOU THINK THAT'S HAPPENING RIGHT NOW REPONSESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS-->
 
     <p class="sealTextblurbSub11Response1" hidden> 
       <b>Sea Lion</b> <br>
@@ -140,7 +141,7 @@
     </p>
     <p class="sealTextblurbSub11Response3" hidden> 
       <b>Sea Lion</b> <br>
-      "That's one of the reasons why I am hanging out by myself. I'm afraid to do anything wrong and be sick just like my brothers and sisters. "
+      "That's one of the reasons why I am hanging out by myself.<br>I'm afraid to do anything wrong and be sick just like my brothers and sisters. "
     </p>
     <p class="sealTextblurbSub11Response4" hidden> 
       <b>Steven Seagull</b> <br>
@@ -150,6 +151,54 @@
       <b>Sea Lion</b> <br>
       "I don't know I'm afraid to eat. At the same time I'm hungry. What can I do?"
     </p>
+
+        <!--BELOW IS QUEST IS THAT WHY YOU LOOK SAD REPONSESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS-->
+
+
+    <p class="sealTextblurbSub12Response1" hidden> 
+      <b>Sea Lion</b> <br>
+      "Mother warned me about being careful on what to eat.<br>Our food can be contaminated with domoic acid."
+    </p>
+
+        <!--BELOW IS QUEST QUESTLIIINE sub 13 REPONSESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS-->
+
+
+
+    <p class="sealTextblurbSub13Quest1" onclick="whatdoesdomoic()" hidden> 
+      <b>Steven Seagull Asks:</b> <br>
+      <u>A. "What does domoic acid do to you?"</u> <br>
+    </p>
+    <p class="sealTextblurbSub13Quest2" style="position: relative; left: -465px; top: 80px;" onclick="whatifyoufind()" hidden> 
+      <u>B. "What if you find food at another region? "</u>
+    </p>
+
+    <!--  SUB 13 Quest 1 RESPOOOOOONSE  -->
+
+    <p class="sealTextblurbSub13Response1" hidden> 
+      <b>Sea Lion</b> <br>
+      "Mother says that domoic acid can cause disorientation, confusion,<br>heart failure, brain damage, and seizures."
+    </p>
+    <p class="sealTextblurbSub13Response2" hidden> 
+      <b>Steven Seagull</b> <br>
+      "Oh wow, that's bad. I understand why you are scared."
+    </p>
+
+
+    <p class="sealTextblurbSub14Quest1" onclick="whatdoesdomoic()" hidden> 
+      <b>Steven Seagull Asks:</b> <br>
+      <u> "Do you need help finding food?"</u> <br>
+    </p>
+    <p class="sealTextblurbSub14Quest2" style="position: relative; left: -465px; top: 80px;" onclick="whatdoesdomoic()" hidden> 
+      <u> "How are you going to get food?"</u> <br>
+    </p>
+    <p class="sealTextblurbSub14Quest3" onclick="whatdoesdomoic()" hidden> 
+      <u> "Since you are afraid of eating, how about I do a little digging about this climate change problem?"</u> <br>
+    </p>
+
+
+
+
+
 
 </div>
 
@@ -380,7 +429,7 @@ if (textNum === 0) {
   }, 500); // 500ms makes them overlap slightly for a smoother look
   textNum = 9;
   console.log("textNum was 7 is now " + textNum)
-  console.log("What's wrong, Sea....")
+  console.log("I know I'm not...")
 }else if (textNum === 9) { //----------------------------------------------------------------------------------------------------------------------------------------------
   const t1 = document.getElementsByClassName("sealTextblurbSub5");
 
@@ -395,7 +444,7 @@ if (textNum === 0) {
   }, 500); // 500ms makes them overlap slightly for a smoother look
   textNum = 10;
   console.log("textNum was 7 is now " + textNum)
-  console.log("What's wrong, Sea....")
+  console.log("Why is.....")
 }else if (textNum === 10) { //----------------------------------------------------------------------------------------------------------------------------------------------
   const t1 = document.getElementsByClassName("sealTextblurbSub6");
 
@@ -410,7 +459,7 @@ if (textNum === 0) {
   }, 500); // 500ms makes them overlap slightly for a smoother look
   textNum = 11;
   console.log("textNum was 7 is now " + textNum)
-  console.log("What's wrong, Sea....")
+  console.log("It's really hard...")
 }else if (textNum === 11) { //----------------------------------------------------------------------------------------------------------------------------------------------
   const t1 = document.getElementsByClassName("sealTextblurbSub7");
 
@@ -425,7 +474,7 @@ if (textNum === 0) {
   }, 500); // 500ms makes them overlap slightly for a smoother look
   textNum = 12;
   console.log("textNum was 11 is now " + textNum)
-  console.log("What's wrong, Sea....")
+  console.log("What do you....")
 }else if (textNum === 12) { //----------------------------------------------------------------------------------------------------------------------------------------------
   const t1 = document.getElementsByClassName("sealTextblurbSub8");
 
@@ -468,44 +517,83 @@ if (textNum === 0) {
   const t1 = document.getElementsByClassName("sealTextblurbSub11Response1");
   const t3 = document.getElementsByClassName("sealTextblurbSub11Response2");
   document.querySelector(".sealTextblurbSub11Response1").setAttribute('hidden', true);
+  document.querySelector(".sealTextblurbSub12Response1").setAttribute('hidden', true);
   document.querySelector(".sealTextblurbSub11Response2").removeAttribute('hidden');
   textNum = 15;
   console.log("textNum was 14 is now " + textNum)
   console.log("Is that why you're.... 2nd Line Quest 1 Seal response")
 }else if (textNum === 15) { //----------------------------------------------------------------------------------------------------------------------------------------------
-  const t1 = document.getElementsByClassName("sealTextblurbSub11Response1");
-  const t3 = document.getElementsByClassName("sealTextblurbSub11Response2");
-  document.querySelector(".sealTextblurbSub11Response1").setAttribute('hidden', true);
-  document.querySelector(".sealTextblurbSub11Response2").removeAttribute('hidden');
-  textNum = 15;
+  const t1 = document.getElementsByClassName("sealTextblurbSub11Response2");
+  const t3 = document.getElementsByClassName("sealTextblurbSub11Response3");
+  document.querySelector(".sealTextblurbSub11Response2").setAttribute('hidden', true);
+  document.querySelector(".sealTextblurbSub11Response3").removeAttribute('hidden');
+  textNum = 16;
   console.log("textNum was 14 is now " + textNum)
-  console.log("Is that why you're.... 2nd Line Quest 1 Seal response")
+  console.log("What are you...")
 }else if (textNum === 16) { //----------------------------------------------------------------------------------------------------------------------------------------------
-  const t1 = document.getElementsByClassName("sealTextblurbSub11Response1");
-  const t3 = document.getElementsByClassName("sealTextblurbSub11Response2");
-  document.querySelector(".sealTextblurbSub11Response1").setAttribute('hidden', true);
-  document.querySelector(".sealTextblurbSub11Response2").removeAttribute('hidden');
-  textNum = 15;
+  const t1 = document.getElementsByClassName("sealTextblurbSub11Response3");
+  const t3 = document.getElementsByClassName("sealTextblurbSub11Response4");
+  document.querySelector(".sealTextblurbSub11Response3").setAttribute('hidden', true);
+  document.querySelector(".sealTextblurbSub11Response4").removeAttribute('hidden');
+  textNum = 17;
   console.log("textNum was 14 is now " + textNum)
-  console.log("Is that why you're.... 2nd Line Quest 1 Seal response")
+  console.log("I don't know...")
 }else if (textNum === 17) { //----------------------------------------------------------------------------------------------------------------------------------------------
-  const t1 = document.getElementsByClassName("sealTextblurbSub11Response1");
-  const t3 = document.getElementsByClassName("sealTextblurbSub11Response2");
-  document.querySelector(".sealTextblurbSub11Response1").setAttribute('hidden', true);
-  document.querySelector(".sealTextblurbSub11Response2").removeAttribute('hidden');
-  textNum = 15;
+  const t1 = document.getElementsByClassName("sealTextblurbSub11Response4");
+  const t3 = document.getElementsByClassName("sealTextblurbSub11Response5");
+  document.querySelector(".sealTextblurbSub11Response4").setAttribute('hidden', true);
+  document.querySelector(".sealTextblurbSub11Response5").removeAttribute('hidden');
+  textNum = 18;
   console.log("textNum was 14 is now " + textNum)
   console.log("Is that why you're.... 2nd Line Quest 1 Seal response")
 }else if (textNum === 18) { //----------------------------------------------------------------------------------------------------------------------------------------------
-  const t1 = document.getElementsByClassName("sealTextblurbSub11Response1");
-  const t3 = document.getElementsByClassName("sealTextblurbSub11Response2");
-  document.querySelector(".sealTextblurbSub11Response1").setAttribute('hidden', true);
-  document.querySelector(".sealTextblurbSub11Response2").removeAttribute('hidden');
-  textNum = 15;
-  console.log("textNum was 14 is now " + textNum)
-  console.log("Is that why you're.... 2nd Line Quest 1 Seal response")
+  const t1 = document.getElementsByClassName("sealTextblurbSub9");
+
+  const t3 = document.getElementsByClassName("sealTextblurbSub10Quest1");
+  const t4 = document.getElementsByClassName("sealTextblurbSub10Quest2");
+  document.querySelector(".sealTextblurbSub11Response5").setAttribute('hidden', true);
+  document.querySelector(".sealTextblurbSub13Quest1").removeAttribute('hidden');
+  document.querySelector(".sealTextblurbSub13Quest2").removeAttribute('hidden');
+  // 1. Fade out the first text
+    
+
+  // 2. Wait a moment (optional) and fade in the second text
+
+    document.body.style.backgroundImage = "url('SealBackground.png')";
+    const t6 = document.querySelector('.clickBox');
+    t6.style.opacity = '0';
+    t6.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+    document.querySelector(".clickBox").setAttribute('hidden',true);
+    console.log("Clickbox should be hidden now cuz of Seal Blurb 12 Quest activation PREPAAAARE")
+
+  textNum = 18;
+  console.log("textNum was 18 is now " + textNum)
+  console.log("SECOND SPLIIIIT PREPAAAAAAAAARE")
+}else if (textNum === 19) { //----------------------------------------------------------------------------------------------------------------------------------------------
+  const t1 = document.getElementsByClassName("sealTextblurbSub13Response1");
+  const t3 = document.getElementsByClassName("sealTextblurbSub13Response2");
+  document.querySelector(".sealTextblurbSub13Response1").setAttribute('hidden', true);
+  document.querySelector(".sealTextblurbSub13Response2").removeAttribute('hidden');
+  textNum = 20;
+  console.log("textNum was 19 is now " + textNum)
+  console.log("oh wow that's..... PREPAAAAAARE SPLIT")
+}else if (textNum === 20) { //----------------------------------------------------------------------------------------------------------------------------------------------
+  const t1 = document.getElementsByClassName("sealTextblurbSub13Response1");
+  const t3 = document.getElementsByClassName("sealTextblurbSub13Response2");
+  document.querySelector(".sealTextblurbSub13Response1").setAttribute('hidden', true);
+  document.querySelector(".sealTextblurbSub13Response2").setAttribute('hidden', true);
+  document.querySelector(".sealTextblurbSub14Quest1").removeAttribute('hidden');
+  document.querySelector(".sealTextblurbSub14Quest2").removeAttribute('hidden');
+  textNum = 21;
+  console.log("textNum was 20 is now " + textNum)
+  console.log("SPLIT IS NOW SPLIT IS NOW PLAYER MAY CHOOSE")
+  const t6 = document.querySelector('.clickBox');
+    t6.style.opacity = '0';
+    t6.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+    document.querySelector(".clickBox").setAttribute('hidden',true);
+    console.log("Clickbox should be hidden now cuz of Seal Blurb 14 Quests opening")
 } else {
-    window.location.href = "startStory.html";
+  console.log("ASDASFASFADASDASDASDASDASDASD")
 }
 
 }
@@ -525,17 +613,60 @@ function whydoyouthinkClicked() {
 
   document.querySelector(".sealTextblurbSub11Response1").removeAttribute('hidden');  
 
-  setTimeout(() => {
     const t6 = document.querySelector('.clickBox');
     t6.style.opacity = '1';
     t6.style.pointerEvents = 'all'; // Make it clickable and real again
     document.querySelector(".clickBox").removeAttribute('hidden');
     console.log("why do you think was picked.. Click box is back baby")
-  }, 500); // 500ms makes them overlap slightly for a smoother look
   textNum = 14;
-  console.log("textNum was 13 is now " + textNum)
+  console.log("textNum is now " + textNum)
   console.log("Mother said it had...... Begin Choice A Seal Style")
 
+}
+
+function isthatwhyyouClicked() {
+
+  iconTester();
+  const removed1 = document.getElementsByClassName("sealTextblurbSub10Quest1");
+  const removed2 = document.getElementsByClassName("sealTextblurbSub10Quest2");
+
+  const added1 = document.getElementsByClassName("sealTextblurbSub10Quest1");
+  document.querySelector(".sealTextblurbSub10Quest1").setAttribute('hidden', true);
+  document.querySelector(".sealTextblurbSub10Quest2").setAttribute('hidden', true);
+
+  document.querySelector(".sealTextblurbSub12Response1").removeAttribute('hidden');  
+
+    const t6 = document.querySelector('.clickBox');
+    t6.style.opacity = '1';
+    t6.style.pointerEvents = 'all'; // Make it clickable and real again
+    document.querySelector(".clickBox").removeAttribute('hidden');
+    console.log("why do you think was picked.. Click box is back baby")
+  textNum = 14;
+  console.log("textNum is now " + textNum)
+  console.log("Mother warned me... Begin Choice B Seal Style")
+
+}
+
+function whatdoesdomoic() {
+
+  iconTester();
+  const removed1 = document.getElementsByClassName("sealTextblurbSub13Quest1");
+  const removed2 = document.getElementsByClassName("sealTextblurbSub13Quest2");
+
+  const added1 = document.getElementsByClassName("sealTextblurbSub13Response1");
+  document.querySelector(".sealTextblurbSub13Quest1").setAttribute('hidden', true);
+  document.querySelector(".sealTextblurbSub13Quest2").setAttribute('hidden', true);
+
+  document.querySelector(".sealTextblurbSub13Response1").removeAttribute('hidden');  
+
+    const t6 = document.querySelector('.clickBox');
+    t6.style.opacity = '1';
+    t6.style.pointerEvents = 'all'; // Make it clickable and real again
+    document.querySelector(".clickBox").removeAttribute('hidden');
+    console.log("Mother says that domo.... Click box is back baby")
+  textNum = 19;
+  console.log("textNum is now " + textNum)
+  console.log("Mother says that domo....Begin Choice A Seal Style")
 }
 
 
