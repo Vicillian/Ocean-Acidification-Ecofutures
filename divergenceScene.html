@@ -73,7 +73,7 @@
     </button>
 
     <button class="crabIcon" style="background: none; border: none;transition: opacity 1s; opacity: 0; pointer-events: none; display: flex; position: relative; left: 200px; top:-1660px;">
-        <img src="Mrs.DungunessCrab.png" height="200px" width="200px" alt="Start Game" style="display: flex; " onclick="iconTester()">
+        <img src="Mrs.DungunessCrab.png" height="200px" width="200px" alt="Start Game" style="display: flex; " onclick="crabClicked()">
     </button>
     <button class="salmonIcon" style="background: none; border: none;transition: opacity 1s; opacity: 0; pointer-events: none; display: flex; position: relative; left: 1000px; top:-1960px;">
         <img src="CohoTheBroho.png" height="200px" width="200px" alt="Start Game" style="display: flex; " onclick="iconTester()">
@@ -759,6 +759,7 @@ if (textNum === 0) {
   }, 500); // 500ms makes them overlap slightly for a smoother look
   console.log("Fade to Map with Icons now")
   console.log("----------------------------")
+  sealVisited = true;
   console.log("Ope last one. textNum is 100 now btw " + textNum)
 
 } else {
@@ -768,6 +769,20 @@ if (textNum === 0) {
 }
 
 //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+function crabClicked(){
+  iconTester();
+  console.log("CRAAAAAAAAAAAAAAAAAAAAAAAABS")
+  console.log("Crab was clicked.")
+  console.log("textNum was "+textNum+" but now it's 101 cuz the Crab")
+  textNum = 101;
+  textSwapFunction();
+
+}
+
+
+
+
 
 
 function whydoyouthinkClicked() {
