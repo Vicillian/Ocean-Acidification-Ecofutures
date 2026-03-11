@@ -259,14 +259,87 @@
       "Of course! I'll visit a few friends and figure out what's going on with the ocean."
     </p>
 
-    <p class="crabTextblurb1" hidden> 
+    <!--  CRAB TEXT STARTS BELOW  aAAAAAAAAAAAAAAAAAAAAAAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaAAAAA -->
+
+
+    <p class="crabTextblurb1" style="position: relative; left: 0px; top:10px;" hidden> 
       Steven the Seagull spots something shiny while circling above, and<br>
-      swoops down to investigate. The crab has lost one of their claws and<br>
+      swoops down to investigate. A crab has lost one of their claws and<br>
       has been trapped in a crab capture net.
+    </p>
+    <p class="crabTextblurb2" style="position: relative; left: 0px; top:10px;" hidden> 
+      <b>Steven Seagull</b> <br>
+      "Hey! What happened to your claw?"
+    </p>
+    <p class="crabTextblurb3" style="position: relative; left: 0px; top:10px;" hidden> 
+      <b>Mrs.DungunessCrab</b> <br>
+      "Oh, I felt threatened when being captured, so it kind of.. fell off."
+    </p>
+    <p class="crabTextblurb4" style="position: relative; left: 0px; top:10px;" hidden> 
+      <b>Steven Seagull</b> <br>
+      "oh.."
+    </p>
+
+    <!--  CRAB QUEST 1 STARTS  aAAAAAAAAAAAAAAAAAAAAAAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaAAAAA -->
+
+
+    <p class="crabTextblurb5sub1" onclick="ifyouhavenomoreuse()" hidden> 
+      <b>Steven Seagull Asks:</b> <br>
+      <u> "...If you have no more use of that claw... Can I have it?"</u> <br>
+    </p>
+    <p class="crabTextblurb5sub2" style="position: relative; left: -515px; top: 100px;" onclick="ididntrealize()" hidden> 
+      <u> "Oh! I didn't realize Dungeness Crabs could do that.."</u> <br>
+    </p>
+
+    <!--  CRAB RESPONSE 1 STARTS  aAAAAAAAAAAAAAAAAAAAAAAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaAAAAA -->
+
+    <p class="crabTextblurb5sub1sub1" style="position: relative; left: 0px; top:10px;" hidden> 
+      <b>Mrs.DungunessCrab</b> <br>
+      "That's morbid... But I don't have a use for it anymore so I guess."
+    </p>
+    <p class="crabTextblurb5sub2sub1" style="position: relative; left: 0px; top:10px;" hidden> 
+      <b>Mrs.DungunessCrab</b> <br>
+      "Yeah, it grows back though."
+    </p>
+
+    
+
+
+    <p class="crabTextblurb6" style="position: relative; left: 0px; top:10px;" hidden> 
+      <b>Steven Seagull Asks:</b> <br>
+      "How did you get in here?"
+    </p>
+    <p class="crabTextblurb7" style="position: relative; left: 0px; top:10px;" hidden> 
+      <b>Mrs.DungunessCrab</b> <br>
+      "Oh, I was just walking/hanging out with my kids (crab larvae),<br>when I got snatched up, and now I'm stuck in here."
+    </p>
+    <p class="crabTextblurb8" style="position: relative; left: 0px; top:10px;" hidden> 
+      <b>Mrs.DungunessCrab</b> <br>
+      "I don't know how they're doing or if they'll survive without me."
+    </p>
+    <p class="crabTextblurb9" style="position: relative; left: 0px; top:10px;" hidden> 
+      <b>Mrs.DungunessCrab</b> <br>
+      "The ocean is more acidic now, so their development is being stunted,<br>and even I can feel the acidity affecting my own shell."
     </p>
 
 
 
+    <p class="crabTextblurb10sub1" onclick="helpfreethecrab()" hidden> 
+      <b>Steven Seagull decides to:</b> <br>
+      <u>Help free the crab from the net</u> <br>
+    </p>
+    <p class="crabTextblurb10sub2" style="position: relative; left: -280px; top: 100px;" onclick="leavethecrab()" hidden> 
+      <u>Leave the crab in there</u> <br>
+    </p>
+
+    <p class="crabtextFinal1" style="position: relative; left: 0px; top:10px;" hidden> 
+      <b>Mrs.DungunessCrab</b> <br>
+      "Thank you so much!"
+    </p>
+    <p class="crabtextFinal2" style="position: relative; left: 0px; top:10px;" hidden> 
+      <b>Mrs.DungunessCrab</b> <br>
+      "Please! Come back!"
+    </p>
 
 
 
@@ -287,6 +360,7 @@
     <audio id="sadViolin" src="sadViolin.mp3"></audio>
     <audio id="buttonClick" src="buttonClick.mp3"></audio>
     <audio id="beachBackgroundAudio" src="seagullNoises.m4a"></audio>
+    <audio id="crabBackgroundAudio" src="crabBackSound.m4a"></audio>
     <audio id="seagullflyaway" src="seagul.mp3"></audio>
     <!------------------------------------------------------------------------------------------------------------------------------------>
     </body>
@@ -818,6 +892,123 @@ if (textNum === 0) {
   console.log("Steven the Seagull spots....")
 
 
+}else if (textNum === 102) { //----------------------------------------------------------------------------------------------------------------------------------------------
+  document.querySelector(".crabTextblurb1").setAttribute('hidden', true);
+  document.querySelector(".crabTextblurb2").removeAttribute('hidden');
+  textNum = textNum + 1;
+  console.log("textNum was 102 is now " + textNum)
+  console.log("Hey! What happened...")
+  document.body.style.backgroundImage = "url('Mrs.DungunessCrabBackgroundAppeared.png')";
+}else if (textNum === 103) { //----------------------------------------------------------------------------------------------------------------------------------------------
+  document.querySelector(".crabTextblurb2").setAttribute('hidden', true);
+  document.querySelector(".crabTextblurb3").removeAttribute('hidden');
+  textNum = textNum + 1;
+  console.log("textNum was 103 is now " + textNum)
+  console.log("I felt threatened...")
+}else if (textNum === 104) { //----------------------------------------------------------------------------------------------------------------------------------------------
+  document.querySelector(".crabTextblurb3").setAttribute('hidden', true);
+  document.querySelector(".crabTextblurb4").removeAttribute('hidden');
+  textNum = 105;
+  console.log("textNum was 104 is now " + textNum)
+  console.log("oh......")
+}else if (textNum === 105) { //----------------------------------------------------------------------------------------------------------------------------------------------
+  document.querySelector(".crabTextblurb4").setAttribute('hidden', true);
+  document.querySelector(".crabTextblurb5sub1").removeAttribute('hidden');
+  document.querySelector(".crabTextblurb5sub2").removeAttribute('hidden');
+  textNum = 105;
+  console.log("textNum was 105 is now " + textNum)
+  console.log("Split for first Crab Quest")
+  const t6 = document.querySelector('.clickBox');
+    t6.style.opacity = '0';
+    t6.style.pointerEvents = 'none'; // Make click unclickable once it's fading
+    document.querySelector(".clickBox").setAttribute('hidden',true);
+    console.log("Clickbox should be hidden now cuz of Seal Blurb 14 Quests opening")
+}else if (textNum === 106) { //----------------------------------------------------------------------------------------------------------------------------------------------
+  document.querySelector(".crabTextblurb5sub1sub1").setAttribute('hidden', true);
+  document.querySelector(".crabTextblurb5sub2sub1").setAttribute('hidden', true);
+  document.querySelector(".crabTextblurb6").removeAttribute('hidden');
+  textNum = 107;
+  console.log("textNum was 106 is now " + textNum)
+  console.log("how did you get....")
+}else if (textNum === 107) { //----------------------------------------------------------------------------------------------------------------------------------------------
+  document.querySelector(".crabTextblurb6").setAttribute('hidden', true);
+  document.querySelector(".crabTextblurb7").removeAttribute('hidden');
+  textNum = 108;
+  console.log("textNum was 107 is now " + textNum)
+  console.log("Oh, I was just walk.....")
+}else if (textNum === 108) { //----------------------------------------------------------------------------------------------------------------------------------------------
+  document.querySelector(".crabTextblurb7").setAttribute('hidden', true);
+  document.querySelector(".crabTextblurb8").removeAttribute('hidden');
+  textNum = 109;
+  console.log("textNum was 108 is now " + textNum)
+  console.log("I don't know how....")
+}else if (textNum === 109) { //----------------------------------------------------------------------------------------------------------------------------------------------
+  document.querySelector(".crabTextblurb8").setAttribute('hidden', true);
+  document.querySelector(".crabTextblurb9").removeAttribute('hidden');
+  textNum = 110;
+  console.log("textNum was 109 is now " + textNum)
+  console.log("The ocean is more....")
+}else if (textNum === 110) { //----------------------------------------------------------------------------------------------------------------------------------------------
+  document.querySelector(".crabTextblurb9").setAttribute('hidden', true);
+  document.querySelector(".crabTextblurb10sub1").removeAttribute('hidden');
+  document.querySelector(".crabTextblurb10sub2").removeAttribute('hidden');
+  textNum = 110;
+  console.log("textNum was 110 is now " + textNum)
+  console.log("Split for second Crab Quest")
+  const t6 = document.querySelector('.clickBox');
+    t6.style.opacity = '0';
+    t6.style.pointerEvents = 'none'; // Make click unclickable once it's fading
+    document.querySelector(".clickBox").setAttribute('hidden',true);
+    console.log("Clickbox should be hidden now cuz of crab quest 2 opening")
+}else if (textNum === 111) { //----------------------------------------------------------------------------------------------------------------------------------------------
+  //document.querySelector(".sealTextblurbSub14Response2").setAttribute('hidden', true);
+  //document.querySelector(".sealTextblurbSub14Response3").removeAttribute('hidden');
+  textNum = 200;
+  console.log("textNum was 111 is now " + textNum)
+  console.log("Insert Conclusion")//
+      const theBox = document.querySelector('.theTextBox');
+  //const t2 = document.querySelector('.text5');
+  const overlay = document.getElementById('fadeOverlay');
+    overlay.style.opacity = '1';
+  overlay.style.pointerEvents = 'all'; // Prevents clicking other things while fading
+  const t6 = document.querySelector('.MusselIcon');
+  const t7 = document.querySelector('.SealionIcon');
+  const t8 = document.querySelector('.crabIcon');
+  const t9 = document.querySelector('.salmonIcon');
+  document.querySelector(".crabtextFinal1").setAttribute('hidden', true);
+  document.querySelector(".crabtextFinal2").setAttribute('hidden', true);
+
+  // 1. Fade out the first text
+
+  // 2. Wait a moment (optional) and fade in the second text
+  setTimeout(() => {
+    const Steven = document.querySelector('.StevenSeagull');
+    Steven.style.opacity = '0';
+    Steven.style.pointerEvents = 'none'; // hides the fella from yer mouse yeah
+        overlay.style.opacity = '0';
+    document.querySelector('#fadeOverlay').setAttribute('hidden', true);
+    console.log(".clickBox now hidden bcz trans to Map mode")
+    theBox.style.opacity = '0';
+    theBox.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+    //t2.style.opacity = '1';
+   // t2.style.pointerEvents = 'all'; // Make the new text clickable if needed
+    document.body.style.backgroundImage = "url('bayPic.png')";
+    console.log("background changed to map")
+      t6.style.opacity = '1';
+    t6.style.pointerEvents = 'all'; // Make the new text clickable if needed
+    t7.style.opacity = '1';
+    t7.style.pointerEvents = 'all'; // Make the new text clickable if needed
+    t8.style.opacity = '1';
+    t8.style.pointerEvents = 'all'; // Make the new text clickable if needed
+    t9.style.opacity = '1';
+    t9.style.pointerEvents = 'all'; // Make the new text clickable if needed
+  }, 500); // 500ms makes them overlap slightly for a smoother look
+  console.log("Fade to Map with Icons now")
+  console.log("----------------------------")
+  crabVisited = true;
+  pauseAudio();
+  console.log("Ope last one. textNum is 200 now btw " + textNum)
+
 } else {
   console.log("ASDASFASFADASDASDASDASDASDASD")
 }
@@ -826,12 +1017,99 @@ if (textNum === 0) {
 
 //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
+function helpfreethecrab(){
+    iconTester();
+  const removed1 = document.getElementsByClassName("crabTextblurb10sub1");
+  const removed2 = document.getElementsByClassName("crabTextblurb10sub2");
+
+  const added1 = document.getElementsByClassName("crabtextFinal1");
+  document.querySelector(".crabTextblurb10sub1").setAttribute('hidden', true);
+  document.querySelector(".crabTextblurb10sub2").setAttribute('hidden', true);
+
+  document.querySelector(".crabtextFinal1").removeAttribute('hidden');  
+
+    const t6 = document.querySelector('.clickBox');
+    t6.style.opacity = '1';
+    t6.style.pointerEvents = 'all'; // Make it clickable and real again
+    document.querySelector(".clickBox").removeAttribute('hidden');
+    console.log("Click box is back baby")
+  textNum = 111;
+  console.log("textNum is now " + textNum)
+  console.log("Thank you so much... Begin Choice A Crab Style")
+}
+
+function leavethecrab(){
+    iconTester();
+  const removed1 = document.getElementsByClassName("crabTextblurb10sub1");
+  const removed2 = document.getElementsByClassName("crabTextblurb10sub2");
+
+  const added1 = document.getElementsByClassName("crabtextFinal2");
+  document.querySelector(".crabTextblurb10sub1").setAttribute('hidden', true);
+  document.querySelector(".crabTextblurb10sub2").setAttribute('hidden', true);
+
+  document.querySelector(".crabtextFinal2").removeAttribute('hidden');  
+
+    const t6 = document.querySelector('.clickBox');
+    t6.style.opacity = '1';
+    t6.style.pointerEvents = 'all'; // Make it clickable and real again
+    document.querySelector(".clickBox").removeAttribute('hidden');
+    console.log("Click box is back baby")
+  textNum = 111;
+  console.log("textNum is now " + textNum)
+  console.log("Please! Come back!.... Begin Choice A Crab Style")
+}
+
+function ifyouhavenomoreuse(){
+    iconTester();
+  const removed1 = document.getElementsByClassName("crabTextblurb5sub1");
+  const removed2 = document.getElementsByClassName("crabTextblurb5sub2");
+
+  const added1 = document.getElementsByClassName("crabTextblurb5sub1sub1");
+  document.querySelector(".crabTextblurb5sub1").setAttribute('hidden', true);
+  document.querySelector(".crabTextblurb5sub2").setAttribute('hidden', true);
+
+  document.querySelector(".crabTextblurb5sub1sub1").removeAttribute('hidden');  
+
+    const t6 = document.querySelector('.clickBox');
+    t6.style.opacity = '1';
+    t6.style.pointerEvents = 'all'; // Make it clickable and real again
+    document.querySelector(".clickBox").removeAttribute('hidden');
+    console.log("Click box is back baby")
+  textNum = 106;
+  console.log("textNum is now " + textNum)
+  console.log("Thats morbid.... But.... Begin Choice A Seal Style")
+}
+
+function ididntrealize(){
+    iconTester();
+  const removed1 = document.getElementsByClassName("crabTextblurb5sub1");
+  const removed2 = document.getElementsByClassName("crabTextblurb5sub2");
+
+  const added1 = document.getElementsByClassName("crabTextblurb5sub2sub1");
+  document.querySelector(".crabTextblurb5sub1").setAttribute('hidden', true);
+  document.querySelector(".crabTextblurb5sub2").setAttribute('hidden', true);
+
+  document.querySelector(".crabTextblurb5sub2sub1").removeAttribute('hidden');  
+
+    const t6 = document.querySelector('.clickBox');
+    t6.style.opacity = '1';
+    t6.style.pointerEvents = 'all'; // Make it clickable and real again
+    document.querySelector(".clickBox").removeAttribute('hidden');
+    console.log("Click box is back baby")
+  textNum = 106;
+  console.log("textNum is now " + textNum)
+  console.log("Yeah, it grows back.... Begin Choice B Seal Style")
+}
+
+
 function crabClicked(){
   iconTester();
   console.log("CRAAAAAAAAAAAAAAAAAAAAAAAABS")
   console.log("Crab was clicked.")
   console.log("textNum was "+textNum+" but now it's 101 cuz the Crab")
   textNum = 101;
+  pauseAudio();
+  crabBackgroundAudiofunction();
   textSwapFunction();
 
 }
@@ -1127,9 +1405,17 @@ function beachBackgroundAudiofunction() {
   console.log("beach audio is playing");
 }
 
+function crabBackgroundAudiofunction() {
+  crabBackgroundAudio.loop = true;
+  crabBackgroundAudio.play();
+  crabBackgroundAudio.volume = 0.2;
+  console.log("crab audio is playing");
+}
+
 function pauseAudio() {
   sadViolin.pause();
   beachBackgroundAudio.pause();
+  crabBackgroundAudio.pause();
 }
 
 function bingBong(){
