@@ -259,11 +259,20 @@
       "Of course! I'll visit a few friends and figure out what's going on with the ocean."
     </p>
 
-    <!--  Seal Questline Images  aAAAAAAAAAAAAAAAAAAAAAAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaAAAAA -->
+    <p class="crabTextblurb1" hidden> 
+      Steven the Seagull spots something shiny while circling above, and<br>
+      swoops down to investigate. The crab has lost one of their claws and<br>
+      has been trapped in a crab capture net.
+    </p>
+
+
+
+
+
+
+        <!--  Character Questline Images  aAAAAAAAAAAAAAAAAAAAAAAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaAAAAA -->
         <img class="StevenSeagull" src="FuckinSteve.png" style="background: none; border: none;transition: opacity 1s; opacity: 0; pointer-events: none;display: flex; position: relative; left: -30px; top:0px;"  height="200px" width="200px" alt="Steven Seagull the Bastard himself">
 
-
-    
 
 
 </div>
@@ -761,6 +770,53 @@ if (textNum === 0) {
   console.log("----------------------------")
   sealVisited = true;
   console.log("Ope last one. textNum is 100 now btw " + textNum)
+
+}else if (textNum === 101) {
+
+
+  const t6 = document.querySelector('.MusselIcon');
+  const t7 = document.querySelector('.SealionIcon');
+  const t8 = document.querySelector('.crabIcon');
+  const t9 = document.querySelector('.salmonIcon');
+  const clickBox = document.querySelector('.clickBox');
+  const theBox = document.querySelector('.theTextBox');
+  const Steven = document.querySelector('.StevenSeagull');
+
+
+  // 1. Fade out the first text
+
+    t6.style.opacity = '0';
+  t6.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+  t7.style.opacity = '0';
+  t7.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+  t8.style.opacity = '0';
+  t8.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+  t9.style.opacity = '0';
+  t9.style.pointerEvents = 'none'; // Make it unclickable once it's fading
+    
+
+  // 2. Wait a moment (optional) and fade in the second text
+  setTimeout(() => {
+    const t2 = document.querySelector('.sealTextblurb1');
+    t2.style.opacity = '1';
+    t2.style.pointerEvents = 'all'; // Make the new text clickable if needed
+    document.querySelector(".sealTextblurbSub1").setAttribute('hidden', true);
+    document.querySelector(".crabTextblurb1").removeAttribute('hidden');
+    Steven.style.opacity = '1';
+    Steven.style.pointerEvents = 'all'; // Make the new text clickable if needed
+    document.body.style.backgroundImage = "url('Mrs.DungunessCrabBackground.png')";
+    console.log("back changed to crab bac")
+    document.querySelector('.clickBox').removeAttribute('hidden');
+    clickBox.style.opacity = '1';
+    clickBox.style.pointerEvents = 'all'; // Make the new text clickable if needed
+    console.log("click box should be back now")
+    theBox.style.opacity = '1';
+    theBox.style.pointerEvents = 'all'; // Make it unclickable once it's fading
+  }, 500); // 500ms makes them overlap slightly for a smoother look
+  textNum = 102;
+  console.log("textNum was 101 is now " + textNum)
+  console.log("Steven the Seagull spots....")
+
 
 } else {
   console.log("ASDASFASFADASDASDASDASDASDASD")
