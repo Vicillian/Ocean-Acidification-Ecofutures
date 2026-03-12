@@ -1,0 +1,81 @@
+
+
+.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-out, visibility 1s;
+}
+
+.hidden {
+  display: none;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+.endingTextbox{
+position:absolute;
+bottom:80px;
+left:50%;
+transform:translateX(-50%);
+width:820px;
+}
+
+#endingDialogue{
+position:absolute;
+top:40px;
+left:50px;
+width:720px;
+font-family:"Times New Roman";
+font-size:18pt;
+color:black;
+}
+
+.dialogueClickArea{
+position:absolute;
+bottom:50px;
+left:50%;
+transform:translateX(-50%);
+width:900px;
+height:350px;
+background:transparent;
+border:none;
+cursor:pointer;
+}
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Background image behind everything */
+#SealBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0; /* behind everything */
+}
+
+/* Make sure textboxes/dialogue are above the image */
+.endingTextbox, #endingDialogue {
+  z-index: 1;
+  position: absolute;      /* already present in your code, just ensure z-index is set */
+}
+
+/* Click area should be on top */
+.dialogueClickArea {
+  z-index: 2;
+}
+
+/* Optional: make textbox background slightly see-through for readability */
+.endingTextbox {
+  background: rgba(255, 255, 255, 0.7);  /* white with 70% opacity */
+  padding: 15px;
+  border-radius: 10px;
+}

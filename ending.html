@@ -1,42 +1,140 @@
-<!doctype html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-EN">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<!DOCTYPE html>
+<html>
 
-    <p class="endingTextblurbsub1" hidden> 
-      <b>Steven Seagull</b> <br>
-      "What are you gonna do?"
-    </p>
-    <p class="sealTextblurbSub11Response5" hidden> 
-      <b>Sea Lion</b> <br>
-      "I don't know I'm afraid to eat. At the same time I'm hungry. What can I do?"
-    </p>
+<head>
+<title>Ending</title>
 
-Make them like this.
-the classes should be
-(character's name)Textblurbsub(1,2,3,4.... ykyk)
-example:
-cohoTextblurbsub4    this is the coho's text and it's the 4th line Coho The Broho says
+<style>
+
+body{
+margin:0;
+padding:0;
+height:100vh;
+background-image:url("endingBackground.png");
+background-size:cover;
+background-position:center;
+font-family:"Times New Roman";
+}
+
+/* textbox image */
+.endingTextbox{
+position:absolute;
+bottom:60px;
+left:50%;
+transform:translateX(-50%);
+width:820px;
+}
+
+/* dialogue text */
+#endingDialogue{
+position:absolute;
+bottom:170px;
+left:50%;
+transform:translateX(-50%);
+width:720px;
+font-size:22px;
+color:black;
+}
+
+/* click area */
+.clickArea{
+position:absolute;
+bottom:50px;
+left:50%;
+transform:translateX(-50%);
+width:900px;
+height:350px;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<img id="SealBackground" src="SealBackground.png" alt="Seal Background">
+
+<body>
+
+<img src="textBox.png" class="endingTextbox">
+
+<p id="endingDialogue">Click to begin...</p>
+
+<div class="clickArea" onclick="nextDialogue()"></div>
+
+<script>
+
+let dialogueIndex = 0;
+
+const endingDialogue = [
+
+"Steven the Seagull lands on the sand near the Santa Cruz Wharf.",
+
+"Steven the Seagull is at the end of his journey, and is flying towards Santa Cuz Wharf, where he lands in the sand to contemplate the information he gained today.",
+
+"But... I'm just a seagull. What can I do?",
+
+"*You hear people laughing nearby.*",
+
+"Hey! What are you guys doing?",
+
+"Fishers: Oh, hello there seagull! We're just fishing at the wharf here.",
+
+"Fishers: We've been fishing here since we were kids.",
+
+"Fishers: But, we noticed some changes in the environment around the ocean lately. Have you notices anything Steven?",
+
+"Why, yes I have noticed a bunch actually! Especially about ocean acidification and how it's been affecting the animals that live on the Santa Cruz coastline.",
+
+"I personally had to resort to eating human food when I could no longer find fish in the ocean.",
+
+"I met a Mrs. Crab who told me that due to ocean acidification, their shells are weaker since it's literally dissolving and it stunted her children larvae's growth.",
+
+"There was an elder mussel who had a similar problem where their shells became thinner due to them being dissolved in this acidic ocean, and it forces them to use calcite instead of aragonite.",
+
+"They are also becoming more toxic to consume for humans because of algae blooms, another byproduct of ocean acidification.",
+
+"These algae blooms also affected a sea lion, who is now afraid to eat their favorite food, fish, because of  the  risk of contamination from domoic acid which could cause neurological damage to them",
+
+"Lastly, I met with a salmon with erratic behavior due to starvation and the lack of available food.  Their   whole lineage of children and relatives keep dying due to these conditions.",
+
+"Fishers: Oh, wow, we never were able to see that before, but thank you so much for bringing this to our attention! I had no idea that this place we love so much was being affected in such a way!",
+
+"Your welcome! You guys can help advocate for these animals! Good luck!",
+
+"*Steven spreads his wings and flies into the sunset.*",
+
+"Wow, that was a lot to take in today.. huh player?",
+
+"But, everything isn't so doom and gloom! I think being informed of what's going on is way better than not knowing at all!",
+
+"I mean, look at me. Before our adventure started I knew nothing about what was going on in the ocean and why my delicious fish disappeared :(",
+
+"Well player, before I head back to Capitola, here are some links to check out for current projects going on that would help the ocean acidification!",
+'<a href="https://drawdown.org/explorer/deploy-artificial-upwelling" target="_blank">Deploy Artificial Upwelling | Project Drawdown®</a>',
+  '<a href="https://drawdown.org/explorer/deploy-ocean-alkalinity-enhancement" target="_blank">Ocean Alkalinity Enhancement | Project Drawdown®</a>',
+  "*Steven flies into the sunset*",
+
+"The End."
+
+];
+
+function nextDialogue(){
+
+const box = document.getElementById("endingDialogue");
+
+if(dialogueIndex < endingDialogue.length){
+
+box.innerText = endingDialogue[dialogueIndex];
+
+dialogueIndex++;
+
+}
+
+}
+
+</script>
+
+</body>
 </html>
 
-"Steven the Seagull is at the end of his journey, and is flying towards Santa Cuz Wharf, where he lands in the sand to contemplate the information he gained today."
-"But.. I'm just a seagull. What can I do?"
-"*Hears laughing from the side*""
-"Figure out who these humans are."
-"The Fishers are spending a peaceful afternoon fishing."
-"Hey! What're you guys doing?"
-"Oh, hello there seagull! We're just fishing at the wharf here."
-"We've been here since childhood, and have noticed some changes lately in the environment. Have you noticed anything seagull?"
-"Why yes, I have noticed a bunch actually! Especially about ocean acidification and how it's been affecting not only those around the Wharf, but also around the Santa Cruz coastline!"
-" I personally had to resort to eating human food when I could no longer find fish in the ocean."
-" I met a Mrs. Crab who told me that due to ocean acidification, their shells are weaker since it's literally dissolving and it stunted her children larvae's growth. "
-"There was an elder mussel who had a similar problem where their shells became thinner due to them being dissolved in this acidic ocean, and it forces them to use calcite instead of aragonite."
-"They are also becoming more toxic to consume for humans because of algae blooms, another byproduct of ocean acidification."
-"These algae blooms also affected a sea lion, who is now afraid to eat their favorite food, fish, because of  the  risk of contamination from domoic acid which could cause neurological damage to them."
-"Lastly, I met with a salmon with erratic behavior due to starvation and the lack of available food.  Their   whole lineage of children and relatives keep dying due to these conditions."
- "Oh, wow, we never were able to see that before, but thank you so much for bringing this to our attention! I had no idea that this place we love so much was being affected in such a way!"
- "Your welcome! You guys can help advocate for these animals! Good luck!" *flies away*
- "Wow, that was a lot to take in today.. huh player?"
- "But everything isn't so doom and gloom! I think being informed of what's going on is way better than not knowing at all! I mean, look at me. Before our adventure started I knew nothing about what was going on in the ocean and why my delicious fish disappeared :( 
-"Well player, before I head back to Capitola, here are some links to check out for current projects going on that would help the ocean acidification!" 
-//Deploy Artificial Upwelling | Project Drawdown® https://drawdown.org/explorer/deploy-artificial-upwellingDeploy
-Ocean Alkalinity Enhancement | Project Drawdown® https://drawdown.org/explorer/deploy-ocean-alkalinity-enhancement*Flies off into sunset*
+
+
