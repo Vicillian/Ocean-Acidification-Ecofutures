@@ -76,7 +76,7 @@
         <img src="Mrs.DungunessCrab.png" height="200px" width="200px" alt="Start Game" style="display: flex; " onclick="crabClicked()">
     </button>
     <button class="salmonIcon" style="background: none; border: none;transition: opacity 1s; opacity: 0; pointer-events: none; display: flex; position: relative; left: 1000px; top:-1960px;">
-        <img src="CohoTheBroho.png" height="200px" width="200px" alt="Start Game" style="display: flex; " onclick="iconTester()">
+        <img src="CohoTheBroho.png" height="200px" width="200px" alt="Start Game" style="display: flex; " onclick="fishTester()">
     </button>
     <!--<p style="display: flex; position: relative; left: 440px; top: 310px;font-family: 'Times New Roman', Times, serif;font-size: 17pt;">It's a sunny day at Capitola Beach, a person is walking down the street with <br>a slice of pizza and fries. The day has had a different feel to it. Gloom <br>lingers in the air as the birds squawk at tourists nearby. <br>You try to enjoy your warm food. </p>
 -->
@@ -682,6 +682,9 @@
     <audio id="crabBackgroundAudio" src="crabBackSound.m4a"></audio>
     <audio id="musselBackgroundAudio" src="musselBackSound.m4a"></audio>
     <audio id="seagullflyaway" src="seagul.mp3"></audio>
+    <audio id="fish" src="fish.mp3"></audio>
+
+    
     <!------------------------------------------------------------------------------------------------------------------------------------>
     </body>
 
@@ -2254,6 +2257,15 @@ function iconTester () {
   console.log("An icon was clicked")
   var omnomnom = new Audio('nomnomnom.mp3');
   omnomnom.play();
+
+}
+
+function fishTester () {
+  console.log("fish fish fish")
+  var fish = new Audio('fish.mp3');
+  fish.volume = 0.25;
+  fish.play();
+  
 
 }
 
