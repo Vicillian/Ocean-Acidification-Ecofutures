@@ -121,9 +121,26 @@ function nextDialogue(){
 
 const box = document.getElementById("endingDialogue");
 
+console.log("box is "+box)
+console.log("dialogueIndex is "+dialogueIndex)
+let img = document.getElementById("SealBackground");
+if (dialogueIndex === 17){
+  document.body.style.backgroundImage = "url('Steve_the_Seagull_Sunset.png')";
+  img.src = "Steve_the_Seagull_Sunset.png";
+  console.log("oogity boogity boo")
+  console.log("hi lavinia idk if this does what you wanted but yeah it does a thing.")
+  console.log("it changes SealBackground, the img you have for a background to the steve sunset one.")
+  console.log("it also changes the background's actual bckgrnd img to steve sunset. lmk when u read this btw")
+
+} else{
+  console.log("background not changed yet")
+  img.src = "SealBackground.png";
+}
+
 if(dialogueIndex < endingDialogue.length){
 
 box.innerText = endingDialogue[dialogueIndex];
+console.log("something happened")
 
 dialogueIndex++;
 

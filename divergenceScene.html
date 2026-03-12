@@ -1168,6 +1168,12 @@ if (textNum === 0) {
   sealVisited = true;
   console.log("Ope last one. textNum is 100 now btw " + textNum)
 
+  if(musselVisited === true && crabVisited === true && sealVisited === true){
+    window.location.href = "ending.html";
+  } else {
+
+  }
+
 }else if (textNum === 101) {
 
 
@@ -1331,6 +1337,12 @@ if (textNum === 0) {
   crabVisited = true;
   pauseAudio();
   console.log("Ope last one. textNum is 200 now btw " + textNum)
+
+  if(musselVisited === true && crabVisited === true && sealVisited === true){
+    window.location.href = "ending.html";
+  } else {
+
+  }
 
 }else if (textNum === 301) {
 
@@ -1748,6 +1760,14 @@ if (textNum === 0) {
   musselVisited = true;
   pauseAudio();
   console.log("Ope last one. textNum is 1000 now btw " + textNum)
+
+
+  if(musselVisited === true && crabVisited === true && sealVisited === true){
+    window.location.href = "ending.html";
+  } else {
+
+  }
+
 } else {
   console.log("ASDASFASFADASDASDASDASDASDASD")
 }
@@ -1757,7 +1777,6 @@ if (textNum === 0) {
 //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 function promisetotellothers(){
-    iconTester();
   const removed1 = document.getElementsByClassName("musselTextblurb41sub1");
   const removed2 = document.getElementsByClassName("musselTextblurb41sub2");
 
@@ -1778,7 +1797,6 @@ function promisetotellothers(){
 }
 
 function questionhowhe(){
-    iconTester();
   const removed1 = document.getElementsByClassName("musselTextblurb41sub1");
   const removed2 = document.getElementsByClassName("musselTextblurb41sub2");
 
@@ -1799,7 +1817,6 @@ function questionhowhe(){
 }
 
 function whatswiththealgae(){
-    iconTester();
   const removed1 = document.getElementsByClassName("musselTextblurb21sub1");
   const removed2 = document.getElementsByClassName("musselTextblurb21sub2");
 
@@ -1820,7 +1837,6 @@ function whatswiththealgae(){
 }
 
 function okay(){
-    iconTester();
   const removed1 = document.getElementsByClassName("musselTextblurb21sub1");
   const removed2 = document.getElementsByClassName("musselTextblurb21sub2");
 
@@ -1841,7 +1857,6 @@ function okay(){
 }
 
 function whatswiththealgae(){
-    iconTester();
   const removed1 = document.getElementsByClassName("musselTextblurb21sub1");
   const removed2 = document.getElementsByClassName("musselTextblurb21sub2");
 
@@ -1862,7 +1877,6 @@ function whatswiththealgae(){
 }
 
 function thatsoundsterrible(){
-    iconTester();
   const removed1 = document.getElementsByClassName("musselTextblurb15sub1");
   const removed2 = document.getElementsByClassName("musselTextblurb15sub2");
 
@@ -1883,7 +1897,6 @@ function thatsoundsterrible(){
 }
 
 function Cantyoujust(){
-    iconTester();
   const removed1 = document.getElementsByClassName("musselTextblurb15sub1");
   const removed2 = document.getElementsByClassName("musselTextblurb15sub2");
 
@@ -1904,7 +1917,6 @@ function Cantyoujust(){
 }
 
 function complainabouthim(){
-    iconTester();
   const removed1 = document.getElementsByClassName("musselTextblurb8sub1");
   const removed2 = document.getElementsByClassName("musselTextblurb8sub2");
 
@@ -1925,7 +1937,6 @@ function complainabouthim(){
 }
 
 function askwhatswrong(){
-    iconTester();
   const removed1 = document.getElementsByClassName("musselTextblurb8sub1");
   const removed2 = document.getElementsByClassName("musselTextblurb8sub2");
 
@@ -1946,7 +1957,6 @@ function askwhatswrong(){
 }
 
 function apologizeandstep(){
-    iconTester();
   const removed1 = document.getElementsByClassName("musselTextblurb5");
 
   const added1 = document.getElementsByClassName("musselTextblurb6");
@@ -1965,7 +1975,6 @@ function apologizeandstep(){
 }
 
 function musselClicked(){
-  iconTester();
   console.log("musselssssssssssssssss")
   console.log("mussel was clicked.")
   console.log("textNum was "+textNum+" but now it's 301 cuz the mussel")
@@ -1977,7 +1986,6 @@ function musselClicked(){
 }
 
 function helpfreethecrab(){
-    iconTester();
   const removed1 = document.getElementsByClassName("crabTextblurb10sub1");
   const removed2 = document.getElementsByClassName("crabTextblurb10sub2");
 
@@ -1998,7 +2006,6 @@ function helpfreethecrab(){
 }
 
 function leavethecrab(){
-    iconTester();
   const removed1 = document.getElementsByClassName("crabTextblurb10sub1");
   const removed2 = document.getElementsByClassName("crabTextblurb10sub2");
 
@@ -2019,7 +2026,6 @@ function leavethecrab(){
 }
 
 function ifyouhavenomoreuse(){
-    iconTester();
   const removed1 = document.getElementsByClassName("crabTextblurb5sub1");
   const removed2 = document.getElementsByClassName("crabTextblurb5sub2");
 
@@ -2040,7 +2046,6 @@ function ifyouhavenomoreuse(){
 }
 
 function ididntrealize(){
-    iconTester();
   const removed1 = document.getElementsByClassName("crabTextblurb5sub1");
   const removed2 = document.getElementsByClassName("crabTextblurb5sub2");
 
@@ -2062,7 +2067,6 @@ function ididntrealize(){
 
 
 function crabClicked(){
-  iconTester();
   console.log("CRAAAAAAAAAAAAAAAAAAAAAAAABS")
   console.log("Crab was clicked.")
   console.log("textNum was "+textNum+" but now it's 101 cuz the Crab")
@@ -2079,8 +2083,6 @@ function crabClicked(){
 
 
 function whydoyouthinkClicked() {
-
-  iconTester();
   const removed1 = document.getElementsByClassName("sealTextblurbSub10Quest1");
   const removed2 = document.getElementsByClassName("sealTextblurbSub10Quest2");
 
@@ -2102,8 +2104,6 @@ function whydoyouthinkClicked() {
 }
 
 function isthatwhyyouClicked() {
-
-  iconTester();
   const removed1 = document.getElementsByClassName("sealTextblurbSub10Quest1");
   const removed2 = document.getElementsByClassName("sealTextblurbSub10Quest2");
 
@@ -2125,8 +2125,6 @@ function isthatwhyyouClicked() {
 }
 
 function whatdoesdomoic() {
-
-  iconTester();
   const removed1 = document.getElementsByClassName("sealTextblurbSub13Quest1");
   const removed2 = document.getElementsByClassName("sealTextblurbSub13Quest2");
 
@@ -2146,8 +2144,6 @@ function whatdoesdomoic() {
 }
 
 function whatifyoufind() {
-
-  iconTester();
   const removed1 = document.getElementsByClassName("sealTextblurbSub13Quest1");
   const removed2 = document.getElementsByClassName("sealTextblurbSub13Quest2");
 
@@ -2167,8 +2163,6 @@ function whatifyoufind() {
 }
 
 function doyouneedhelp() {
-
-  iconTester();
   const removed1 = document.getElementsByClassName("sealTextblurbSub14Quest1");
   const removed2 = document.getElementsByClassName("sealTextblurbSub14Quest2");
 
@@ -2188,8 +2182,6 @@ function doyouneedhelp() {
 }
 
 function howareyougoing() {
-
-  iconTester();
   const removed1 = document.getElementsByClassName("sealTextblurbSub14Quest1");
   const removed2 = document.getElementsByClassName("sealTextblurbSub14Quest2");
   const removed3 = document.getElementsByClassName("sealTextblurbSub14Quest3");
@@ -2213,8 +2205,6 @@ function howareyougoing() {
 }
 
 function sinceyouareafraid() {
-
-  iconTester();
   const removed1 = document.getElementsByClassName("sealTextblurbSub14Quest1");
   const removed2 = document.getElementsByClassName("sealTextblurbSub14Quest2");
   const removed3 = document.getElementsByClassName("sealTextblurbSub14Quest3");
@@ -2243,7 +2233,6 @@ function nextPage(){
 }
 
 function sealClicked(){
-  iconTester();
   console.log("SEEEEEEEEEEEEEEEEEAAAAAAAAAAAAAALLLL")
   console.log("Seal was clicked.")
   console.log("textNum was "+textNum+" but now it's 4 cuz the SEAL")
