@@ -141,22 +141,17 @@ const endingDialogue = [
 
 function nextEndingDialogue() {
   const dialogueBox = document.getElementById("endingDialogue");
-  const backgroundImg = document.getElementById("SealBackground");
 
   if (endingIndex < endingDialogue.length) {
-    dialogueBox.innerHTML = endingDialogue[endingIndex]; // <-- use innerHTML for links
+    dialogueBox.innerText = endingDialogue[endingIndex];
 
-    // Swap background when Steven flies into the sunset
-    if (endingDialogue[endingIndex] === "*Steven flies into the sunset*") {
-      backgroundImg.style.transition = "opacity 1s ease-in-out";
-      backgroundImg.style.opacity = 0; // fade out
-      setTimeout(() => {
-        backgroundImg.src = "Steve_the_Seagull_Sunet.png"; // new background
-        backgroundImg.style.opacity = 1; // fade in
-      }, 500);
+    // Change background when Steven flies into the sunset
+    if (endingDialogue[endingIndex] === "*Steve spreads his wings and flies into the sunset.*") {
+      document.body.style.backgroundImage = "url('Steve_the_Seagull_Sunet.png')";
+      document.body.style.backgroundSize = "cover";
+      document.body.style.backgroundPosition = "center";
     }
 
     endingIndex++;
   }
 }
-
