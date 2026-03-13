@@ -29,9 +29,9 @@ width:820px;
 #endingDialogue{
 position:absolute;
 bottom:170px;
-left:50%;
+left:52%;
 transform:translateX(-50%);
-width:720px;
+width:700px;
 font-size:22px;
 color:black;
 }
@@ -68,11 +68,11 @@ const endingDialogue = [
 
 "Steve the Seagull is at the end of his journey, and is flying towards Santa Cuz Wharf, where he lands in the sand to contemplate the information he gained today.",
 
-"But... I'm just a seagull. What can I do?",
+"Steve: But... I'm just a seagull. What can I do?",
 
 "*You hear people laughing nearby.*",
 
-"Hey! What are you guys doing?",
+"Steve: Hey! What are you guys doing?",
 
 "Fishers: Oh, hello there seagull! We're just fishing at the wharf here.",
 
@@ -80,37 +80,40 @@ const endingDialogue = [
 
 "Fishers: But, we noticed some changes in the environment around the ocean lately. Have you notices anything Steven?",
 
-"Why, yes I have noticed a bunch actually! Especially about ocean acidification and how it's been affecting the animals that live on the Santa Cruz coastline.",
+"Steve: Why, yes I have noticed a bunch actually! Especially about ocean acidification and how it's been affecting the animals that live on the Santa Cruz coastline.",
 
-"I personally had to resort to eating human food when I could no longer find fish in the ocean.",
+"Steve: I personally had to resort to eating human food when I could no longer find fish in the ocean.",
 
-"I met a Mrs. Crab who told me that due to ocean acidification, their shells are weaker since it's literally dissolving and it stunted her children larvae's growth.",
+"Steve: I met a Mrs. Crab who told me that due to ocean acidification, their shells are weaker since it's literally dissolving and it stunted her children larvae's growth.",
 
-"There was an elder mussel who had a similar problem where their shells became thinner due to them being dissolved in this acidic ocean, and it forces them to use calcite instead of aragonite.",
+"Steve: There was an elder mussel who had a similar problem where their shells became thinner due to them being dissolved in this acidic ocean, and it forces them to use calcite instead of aragonite.",
 
-"They are also becoming more toxic to consume for humans because of algae blooms, another byproduct of ocean acidification.",
+"Steve: They are also becoming more toxic to consume for humans because of algae blooms, another byproduct of ocean acidification.",
 
-"These algae blooms also affected a sea lion, who is now afraid to eat their favorite food, fish, because of  the  risk of contamination from domoic acid which could cause neurological damage to them",
+"Steve: These algae blooms also affected a sea lion, who is now afraid to eat their favorite food, fish, because of  the  risk of contamination from domoic acid which could cause neurological damage to them",
 
-"Lastly, I met with a salmon with erratic behavior due to starvation and the lack of available food.  Their   whole lineage of children and relatives keep dying due to these conditions.",
+"Steve: Lastly, I met with a salmon with erratic behavior due to starvation and the lack of available food.  Their   whole lineage of children and relatives keep dying due to these conditions.",
 
 "Fishers: Oh, wow, we never were able to see that before, but thank you so much for bringing this to our attention! I had no idea that this place we love so much was being affected in such a way!",
 
-"Your welcome! You guys can help advocate for these animals! Good luck!",
+"Stev: Your welcome! You guys can help advocate for these animals! Good luck!",
 
 "*Steve spreads his wings and flies into the sunset.*",
 
-"Wow, that was a lot to take in today.. huh player?",
+"Steve: Wow, that was a lot to take in today.. huh player?",
 
-"But, everything isn't so doom and gloom! I think being informed of what's going on is way better than not knowing at all!",
+"Steve: But, everything isn't so doom and gloom! I think being informed of what's going on is way better than not knowing at all!",
 
-"I mean, look at me. Before our adventure started I knew nothing about what was going on in the ocean and why my delicious fish disappeared :(",
+"Steve: I mean, look at me. Before our adventure started I knew nothing about what was going on in the ocean and why my delicious fish disappeared :(",
 
-"Well player, before I head back to Capitola, here are some links to check out for current projects going on that would help the ocean acidification!",
+"Steve: Well player, before I head back to Capitola, there are some links after the end to check out for current projects going on that would help the ocean acidification!",
 
-  "*Steven flies into the sunset*",
+"*Steve flies into the sunset*",
 
-"The End."
+"The End.",
+
+"Artificial Upwelling | Project Drawdown® - https://drawdown.org/explorer/deploy-artificial-upwellingDeploy",
+"Ocean Alkalinity Enhancement | Project Drawdown®: https://drawdown.org/explorer/deploy-ocean-alkalinity-enhancement"
 
 ];
 
@@ -121,6 +124,11 @@ const box = document.getElementById("endingDialogue");
 console.log("box is "+box)
 console.log("dialogueIndex is "+dialogueIndex)
 let img = document.getElementById("sunset");
+if(dialogueIndex === 3){
+document.body.style.backgroundImage = "url('fishers_wharf.png')";
+console.log("Fishers")
+}
+
 if (dialogueIndex === 17){
   document.body.style.backgroundImage = "url('Steve_the_Seagull_Sunset.png')";
   console.log("oogity boogity boo")
